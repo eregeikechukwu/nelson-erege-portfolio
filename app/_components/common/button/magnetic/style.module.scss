@@ -1,0 +1,9 @@
+.span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 14ch;
+  word-break: break-all;
+}
