@@ -22,6 +22,8 @@ export function OffcanvasToggle({ isOpen, handleOpen }) {
   const containerRef = useRef(null);
   const elementRef = useRef(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const [isTriggered, setIsTriggered] = useState(null);
+  const root = document.body;
 
   const { scrollYProgress } = useOffcanvasToggle({
     element: containerRef,
@@ -35,7 +37,6 @@ export function OffcanvasToggle({ isOpen, handleOpen }) {
   const location = usePathname();
 
   useEffect(() => {
-    // const root = document.body;
     // console.log(root);
 
     // const observerCallback = entries => {
@@ -66,18 +67,32 @@ export function OffcanvasToggle({ isOpen, handleOpen }) {
     // observer.observe(root);
     let triggered = false;
     window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop || window.scrollY;
+      const scrollTop = root.getBoundingClientRect().y;
 
-      if (scrollTop > 200 && !triggered) {
+      if (scrollTop < -400 && !triggered) {
         triggered = true;
+        console.log(scrollTop);
         setIsIntersecting(true);
+        // setIsTriggered(true);
       } else {
         triggered = false;
         setIsIntersecting(false);
+        // setIsTriggered(false);
       }
+
+      setInterval(() => {
+        // console.log(scrollTop)
+      }, 3000);
     });
+
+    // setIsIntersecting(triggered);
   }, [location]);
-  // console.log(isIntersecting);
+
+  // useEffect(() => {
+  //   // console.log(isTriggered);
+  //   setIsIntersecting(isTriggered);
+  //   // console.log('this is how much i get updated');
+  // }, [isTriggered]);
 
   return (
     <AnimatePresence>
