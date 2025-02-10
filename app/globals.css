@@ -16,6 +16,7 @@
   body {
     background-color: theme(colors.background);
     color: theme(colors.foreground);
+    height: auto;
   }
 }
 

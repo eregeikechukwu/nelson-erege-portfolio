@@ -12,7 +12,7 @@ export function useOffcanvasToggle({ element, callback }) {
     target: element,
     offset: ['500px 500px', 'end start'],
   });
-  console.log(scrollYProgress);
+  // console.log(scrollYProgress);
 
   useMotionValueEvent(scrollYProgress, 'change', callback);
 

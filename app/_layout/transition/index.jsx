@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
@@ -8,13 +8,43 @@ import { usePathname } from 'next/navigation';
 import { useLenis, useTimeOut } from '@/hooks';
 
 import { Preloader } from './preloader';
-
 /** @param {import('react').PropsWithChildren<unknown>} */
 export function Transition({ children }) {
   const [isLoading, setLoading] = useState(true);
   const pathname = usePathname();
+  const scrollContainerRef = useRef(null);
+  const lenis = useLenis(); // Ensure this returns a valid Lenis instance
 
-  useLenis();
+  useEffect(() => {
+    if (!lenis || !scrollContainerRef.current) return;
+
+    const scrollHandler = event => {
+      event.preventDefault(); // Prevent default scroll
+
+      // Determine scroll direction and control speed
+      const slowFactor = 2; // Adjust this for slower scrolling
+      const scrollAmount = event.deltaY * slowFactor; // Adjust scroll amount based on deltaY
+
+      // Get the current scroll position
+      const currentScroll = scrollContainerRef.current.scrollTop;
+
+      // Update Lenis scroll position
+      lenis.scrollTo(currentScroll + scrollAmount, {
+        duration: 0.5, // Duration for the scroll animation
+      });
+    };
+
+    const container = scrollContainerRef.current;
+
+    // Add event listener for mouse wheel
+    container.addEventListener('wheel', scrollHandler, { passive: false });
+
+    // Cleanup listener on component unmount
+    return () => {
+      container.removeEventListener('wheel', scrollHandler);
+    };
+  }, [lenis]);
+
   useTimeOut({
     callback: () => {
       setLoading(false);
@@ -25,11 +55,13 @@ export function Transition({ children }) {
   });
 
   return (
-    <div key={pathname} className='overflow-hidden'>
-      <AnimatePresence mode='wait'>
-        {/* {isLoading ? <Preloader /> : null} */}
-      </AnimatePresence>
-      {children}
+    <div ref={scrollContainerRef} className='h-auto overflow-auto'>
+      <div key={pathname} className='overflow-hidden'>
+        <AnimatePresence mode='wait'>
+          {/* {isLoading ? <Preloader /> : null} */}
+        </AnimatePresence>
+        {children}
+      </div>
     </div>
   );
 }

@@ -77,7 +77,7 @@ export function OffcanvasToggle({ isOpen, handleOpen }) {
       }
     });
   }, [location]);
-  console.log(isIntersecting);
+  // console.log(isIntersecting);
 
   return (
     <AnimatePresence>

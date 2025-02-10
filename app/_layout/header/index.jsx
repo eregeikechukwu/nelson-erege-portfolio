@@ -23,6 +23,7 @@ export function Header() {
     gsap.to(ref.current, {
       backgroundPosition: 'center -100px', //Adjusr background position
       y: 230,
+      duration: 3,
       ease: 'none',
       scrollTrigger: {
         trigger: ref.current,
