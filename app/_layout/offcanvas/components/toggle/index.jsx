@@ -81,7 +81,7 @@ export function OffcanvasToggle({ isOpen, handleOpen }) {
       }
 
       setInterval(() => {
-        // console.log(scrollTop)
+        console.log(scrollTop);
       }, 3000);
     });
 
