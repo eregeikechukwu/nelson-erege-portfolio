@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+
   justify-content: space-between;
   gap: 2.5rem;
   padding-block: clamp(4em, 12vw, 20em) clamp(5em, 14vh, 16em);
@@ -13,7 +14,8 @@ export const Wrapper = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme?.breakpoints?.lg}) {
     flex-wrap: revert;
-    margin-bottom: 4rem;
+    margin: 0 auto 5rem;
+    width: 90%;
   }
 `;
 

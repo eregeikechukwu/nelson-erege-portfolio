@@ -1,6 +1,11 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+
 import { motion } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { NodeNextRequest } from 'next/dist/server/base-http/node';
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
@@ -12,6 +17,25 @@ const phrase =
   'Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.';
 
 export function Description() {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.set(ref.current, { top: '90%' });
+    gsap.to(ref.current, {
+      backgroundPosition: 'centre -100px',
+      y: -250,
+      duration: 3,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: ref.current,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+      },
+    });
+  }, []);
+
   return (
     <article className='container relative'>
       <Wrapper>
@@ -21,7 +45,7 @@ export function Description() {
           </Title>
         </div>
 
-        <div className='basis-7/12 lg:basis-3/12'>
+        <div className='basis-7/12 lg:basis-4/12'>
           <ParallaxFade>
             <Balancer as='p' className='mt-2 text-base lg:text-lg'>
               The combination of my passion for design, code & interaction
@@ -36,10 +60,14 @@ export function Description() {
           transition={{
             duration: 0.5,
           }}
+          className='md:absolute md:left-[83%] md:top-[130%] '
         >
-          <div className='absolute lg:top-[130%]  top-3/4 right-0 lg:me-10 z-10'>
+          <div
+            className='absolute lg:top-[130%]  top-3/4 right-0  z-10'
+            ref={ref}
+          >
             <Link href='/about' passHref>
-              <MagneticButton variant='ghost' size='xl'>
+              <MagneticButton variant='ghost' size='ab'>
                 About me
               </MagneticButton>
             </Link>

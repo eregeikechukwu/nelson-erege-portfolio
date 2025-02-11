@@ -37,7 +37,7 @@ export function Header() {
   return (
     <ReactLenis duration={5} easing={t => Math.pow(t, 2)} root>
       <motion.header
-        className='relative h-screen page overflow-hidden bg-secondary-foreground text-background'
+        className='relative h-screen   md:h-[110vh] page overflow-hidden bg-secondary-foreground text-background'
         variants={slideUp}
         initial='initial'
         animate='enter'
@@ -53,7 +53,7 @@ export function Header() {
 
         <div className='relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
           <div className='select-none'>
-            <h1 className='text-[max(9em,15vw)]'>
+            <h1 className='text-[max(9em,15vw)]  md:mb-12'>
               <ParallaxSlider repeat={4} baseVelocity={2}>
                 <span className='pe-12'>
                   Nelson Erege
