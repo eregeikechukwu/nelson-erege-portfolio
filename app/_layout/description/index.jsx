@@ -21,10 +21,10 @@ export function Description() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.set(ref.current, { top: '90%' });
+    gsap.set(ref.current, { top: '10%' });
     gsap.to(ref.current, {
       backgroundPosition: 'centre -100px',
-      y: -250,
+      y: -200,
       duration: 3,
       ease: 'none',
       scrollTrigger: {
@@ -60,7 +60,7 @@ export function Description() {
           transition={{
             duration: 0.5,
           }}
-          className='md:absolute md:left-[83%] md:top-[130%] '
+          className='md:absolute md:left-[83%] md:top-[100%] '
         >
           <div
             className='absolute lg:top-[130%]  top-3/4 right-0  z-10'
