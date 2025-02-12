@@ -64,22 +64,24 @@ export function useFollowPointer({ modal, cursor, label }) {
 
       // Move cursor
       xMoveCursor.current = gsap.quickTo(cursor.current, 'left', {
-        duration: 0.5,
-        ease: 'power3',
+        duration: 0.7,
+        ease: 'power2.out',
+        delay: 0.1,
       });
       yMoveCursor.current = gsap.quickTo(cursor.current, 'top', {
-        duration: 0.5,
-        ease: 'power3',
+        duration: 0.7,
+        ease: 'power2.out',
+        delay: 0.1,
       });
 
       // Move cursor label
       xMoveLabel.current = gsap.quickTo(label.current, 'left', {
-        duration: 0.45,
-        ease: 'power3',
+        duration: 0.6,
+        ease: 'power2',
       });
       yMoveLabel.current = gsap.quickTo(label.current, 'top', {
-        duration: 0.45,
-        ease: 'power3',
+        duration: 0.6,
+        ease: 'power2',
       });
     });
 

@@ -34,7 +34,7 @@ export const ThumbnailModal = forwardRef(
     return (
       <MotionComponent
         ref={ref}
-        className='pointer-events-none fixed left-1/2 top-1/2 h-80 w-80 overflow-hidden rounded bg-secondary-foreground'
+        className='pointer-events-none fixed left-1/2 top-1/2 h-0 w-0 overflow-hidden rounded bg-secondary-foreground'
         variants={variants}
         initial='initial'
         animate={active ? 'enter' : 'closed'}

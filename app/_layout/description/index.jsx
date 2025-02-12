@@ -24,7 +24,7 @@ export function Description() {
     gsap.set(ref.current, { top: '10%' });
     gsap.to(ref.current, {
       backgroundPosition: 'centre -100px',
-      y: -200,
+      y: -180,
       duration: 3,
       ease: 'none',
       scrollTrigger: {
@@ -60,7 +60,7 @@ export function Description() {
           transition={{
             duration: 0.5,
           }}
-          className='md:absolute md:left-[83%] md:top-[100%] '
+          className='md:absolute md:left-[83%] md:top-[110%] '
         >
           <div
             className='absolute lg:top-[130%]  top-3/4 right-0  z-10'

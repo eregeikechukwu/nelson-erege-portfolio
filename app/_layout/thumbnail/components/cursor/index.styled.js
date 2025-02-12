@@ -5,11 +5,11 @@ import { styled } from 'styled-components';
 import { Center } from '@/components';
 
 export const CursorShape = styled(Center)`
-  color: ${({ theme }) => theme?.colors?.background};
-  width: 5rem;
-  height: 5rem;
+  color: white;
+  width: 7.6rem;
+  height: 7.6rem;
   border-radius: 100vmax;
-  font-size: 0.875rem;
+  font-size: 1.275rem;
   line-height: 1.25rem;
   position: fixed;
   z-index: 2;

@@ -46,6 +46,37 @@
   }
 }
 
+.flex-projects-col {
+  display: block;
+  width: 100%;
+  /* order: 2; */
+  position: relative;
+}
+
+.overlay-projects {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  height: 100%;
+  width: 100%;
+}
+
+h4 {
+  font-family: 'Dennis Sans', sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  font-size: clamp(1.55em, 2.3vw, 2.5em);
+  line-height: 1.45;
+  margin-bottom: 1em;
+}
+
+.stripe {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
 :root {
   --color-dark: #1c1d20;
   --color-dark-dark: #141517;

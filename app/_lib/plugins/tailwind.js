@@ -97,6 +97,9 @@ export const tailwindPlugin = plugin(
         fontFamily: {
           neue_montreal: ['var(--font-neue-montreal)'],
         },
+        fontSize: {
+          '2rem': '2rem',
+        },
         transitionDuration: {
           1500: '1500ms',
           2000: '2000ms',
