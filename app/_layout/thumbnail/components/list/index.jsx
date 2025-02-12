@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import { Variable } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { Variable } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { thumbnailOptions } from '@/data';
+import { thumbnailOptions } from "@/data";
 
-import styles from './styles.module.scss';
-import css from '../../../../icons/css.svg';
-import figma from '../../../../icons/figma.svg';
-import html from '../../../../icons/html.svg';
-import javascript from '../../../../icons/javascript.svg';
-import nextjs from '../../../../icons/nextjs.svg';
-import react from '../../../../icons/react.svg';
-import scss from '../../../../icons/scss.svg';
-import tailwind from '../../../../icons/tailwind.svg';
+import styles from "./styles.module.scss";
+import css from "../../../../icons/css.svg";
+import figma from "../../../../icons/figma.svg";
+import html from "../../../../icons/html.svg";
+import javascript from "../../../../icons/javascript.svg";
+import nextjs from "../../../../icons/nextjs.svg";
+import react from "../../../../icons/react.svg";
+import scss from "../../../../icons/scss.svg";
+import tailwind from "../../../../icons/tailwind.svg";
 
 /**
  * @param {Object} props
@@ -41,39 +41,41 @@ export function ThumbnailList({
   moveItems,
 }) {
   const items = thumbnailOptions.map(({ href, title, stack }, index) => {
-    console.log(`/app/icons/${stack[0].toLowerCase()}.svg`);
-
     const id = index;
     return (
       <li
         key={`thumbnail-list-${id}`}
-        className='border-t border-solid transition-all last-of-type:border-b group-hover:opacity-90'
+        className="border-t border-solid transition-all last-of-type:border-b"
         style={
           {
             // paddingInline: 'calc(clamp(1em,3vw,4em) * 2)',
             // paddingBlock: 'clamp(1em,3vw,4em)',
           }
         }
-        onPointerEnter={({ clientX, clientY }) => {
-          handlePointerEnter(id);
-          moveItems(clientX, clientY);
-        }}
-        onPointerLeave={({ clientX, clientY }) => {
-          handlePointerLeave(id);
-          moveItems(clientX, clientY);
-        }}
       >
-        <div className={styles.projects__list__container}>
-          <Link href={href} className={styles.projects__list__link} passHref>
+        <div className={`group ${styles.projects__list__container}`}>
+          <Link
+            href={href}
+            className={`${styles.projects__list__link} project`}
+            onPointerEnter={({ clientX, clientY }) => {
+              handlePointerEnter(id);
+              moveItems(clientX, clientY);
+            }}
+            onPointerLeave={({ clientX, clientY }) => {
+              handlePointerLeave(id);
+              moveItems(clientX, clientY);
+            }}
+            passHref
+          >
             <div
-              className={`${styles.projects__list__thumbnail} flex-projects-col`}
+              className={`${styles.projects__list__thumbnail} flex-projects-col group-hover:scale-[1.03]`}
             >
               <div className={styles.title__image}>
                 <div
                   className={`${styles.overlay__image} overlay-projects`}
                   style={{
                     backgroundImage:
-                      'url(https://res.cloudinary.com/du0dbvljb/image/upload/v1739313600/cld-sample-2.png)',
+                      "url(https://res.cloudinary.com/du0dbvljb/image/upload/v1739313600/cld-sample-2.png)",
                   }}
                 ></div>
               </div>
@@ -84,31 +86,41 @@ export function ThumbnailList({
               </h4>
               <div className={styles.stripe}></div>
             </div>
-            <div className={`${styles.projects__list__stack} flex-col`}>
+            <div
+              className={`${styles.projects__list__stack} flex w-full flex-row flex-wrap`}
+            >
               {stack.map((item, i) => {
                 const lowerCaseItem = item.toLowerCase();
                 const iconSrc = iconPaths[lowerCaseItem];
 
                 return (
-                  <div key={`skill ${i}`}>
-                    <span>{item}</span>
+                  <div
+                    key={`skill ${i}`}
+                    class="mb-4 mr-5 flex w-auto min-w-16 items-center gap-[0.3rem]"
+                  >
+                    <span class="text-xl font-extrabold">{item}</span>
                     <Image
                       src={iconSrc}
                       alt={`${item}-icon`}
                       width={50}
                       height={50}
-                      style={{ width: '50px', height: 'auto' }}
+                      style={{ width: "25px", height: "auto" }}
                     />
                   </div>
                 );
               })}
             </div>
-            <div className={`${styles.projects__list__details} flex-col`}></div>
+            <div className={`${styles.projects__list__details} flex-col`}>
+              <p>
+                nojjoijsjjoshihuhsuygsisihhishoshihushhihsuhishuihshiuhspu usdhu
+                uhsohidjko
+              </p>
+            </div>
           </Link>
         </div>
       </li>
     );
   });
 
-  return <ul className={`group ${styles.projects__list}`}>{items}</ul>;
+  return <ul className={` ${styles.projects__list}`}>{items}</ul>;
 }

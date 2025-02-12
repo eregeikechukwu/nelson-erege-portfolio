@@ -77,7 +77,7 @@ export function Transition({ children }) {
     <div ref={scrollContainerRef} className='h-auto overflow-auto'>
       <div key={pathname} className='overflow-hidden'>
         <AnimatePresence mode='wait'>
-          {/* {isLoading ? <Preloader /> : null} */}
+          {isLoading ? <Preloader /> : null}
         </AnimatePresence>
         {children}
       </div>
