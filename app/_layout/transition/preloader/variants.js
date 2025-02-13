@@ -4,10 +4,11 @@ export const slideUp = {
     top: 0,
   },
   exit: {
-    top: '-100vh',
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+    top: "-100vh",
+    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 3 },
   },
 };
+//0.2
 
 /** @type {import('framer-motion').Variants} */
 export const fade = {

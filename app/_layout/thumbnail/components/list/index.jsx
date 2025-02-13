@@ -96,9 +96,9 @@ export function ThumbnailList({
                 return (
                   <div
                     key={`skill ${i}`}
-                    class="mb-4 mr-5 flex w-auto min-w-16 items-center gap-[0.3rem]"
+                    className="mb-4 mr-5 flex w-auto min-w-16 items-center gap-[0.3rem]"
                   >
-                    <span class="text-xl font-extrabold">{item}</span>
+                    <span className="text-xl font-extrabold">{item}</span>
                     <Image
                       src={iconSrc}
                       alt={`${item}-icon`}
@@ -111,9 +111,10 @@ export function ThumbnailList({
               })}
             </div>
             <div className={`${styles.projects__list__details} flex-col`}>
-              <p>
-                nojjoijsjjoshihuhsuygsisihhishoshihushhihsuhishuihshiuhspu usdhu
-                uhsohidjko
+              <p className="text-xl">
+                I help companies from all over the world with tailor-made
+                solutions. With each project, I push my work to new horizons,
+                always putting quality first.
               </p>
             </div>
           </Link>
