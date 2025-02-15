@@ -1,14 +1,15 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
+import { useRef } from "react";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-import { projectOptions } from '@/data';
-import { useProjectSlider } from '@/hooks';
-import { randomId } from '@/utils';
+import { projectOptions } from "@/data";
+import { useProjectSlider } from "@/hooks";
+import { randomId } from "@/utils";
 
-import { ProjectSlider } from './slider';
+import { ProjectSlider } from "./slider";
+import styles from "./styles.module.scss";
 
 export function Project() {
   /** @type {import('react').MutableRefObject<HTMLElement>} */
@@ -27,13 +28,13 @@ export function Project() {
   });
 
   return (
-    <section ref={containerRef} className='relative z-10 mt-14'>
-      <div className='grid items-center'>
-        <div className='bg-background'>
+    <section ref={containerRef} className="relative z-10 mt-14">
+      <div className="grid items-center">
+        <div className="bg-background">
           <motion.div
-            className='mb-10 flex gap-10'
+            className="mb-10 flex gap-10"
             style={{
-              width: '120vw',
+              width: "120vw",
               x: transformX1,
             }}
           >
@@ -41,9 +42,9 @@ export function Project() {
           </motion.div>
 
           <motion.div
-            className='mb-10 flex gap-10'
+            className="mb-10 flex gap-10"
             style={{
-              width: '120vw',
+              width: "120vw",
               x: transformX2,
             }}
           >
@@ -52,10 +53,9 @@ export function Project() {
         </div>
 
         <motion.div
-          className='w-screen bg-background'
+          className={`${styles.curvedDiv} w-screen bg-background`}
           style={{
             height: transformY,
-            borderRadius: '0 0 50% 50%',
           }}
         />
       </div>

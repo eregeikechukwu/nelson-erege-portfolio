@@ -10,6 +10,7 @@ import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
 import { MagneticButton, ParallaxFade, ParallaxReveal } from "@/components";
+import { useSlowScroll } from "@/hooks";
 
 import { Title, Wrapper } from "./index.styled";
 
@@ -19,22 +20,7 @@ const phrase =
 export function Description() {
   const ref = useRef(null);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.set(ref.current, { top: "10%" });
-    gsap.to(ref.current, {
-      backgroundPosition: "centre -100px",
-      y: -180,
-      duration: 3,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ref.current,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
-  }, []);
+  useSlowScroll(ref, 3, -180);
 
   return (
     <article className="container relative">
