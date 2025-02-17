@@ -1,8 +1,30 @@
 "use client";
 
+import { MoveDownRight } from "lucide-react";
+
+import { Arrow, ProfilePicture } from "@/components";
+
 import styles from "./styles.module.scss";
 function Headers() {
-  return <div>Love you all</div>;
+  return (
+    <div className={styles.headers}>
+      <div className={`${styles.headers__head} flex-col`}>
+        <h1 className={styles.headers__head__h1}>
+          <span>
+            <ProfilePicture />
+            Let&#39;s start a&nbsp;
+          </span>
+          <span>project together</span>
+        </h1>
+      </div>
+      <div className={`${styles.headers__profilepic} flex-col`}>
+        <ProfilePicture />
+        <div className={styles.arrow}>
+          <Arrow />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export { Headers };

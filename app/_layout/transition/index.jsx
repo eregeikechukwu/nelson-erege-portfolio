@@ -22,7 +22,7 @@ export function Transition({ children }) {
       setLoading(false);
       window.scrollTo(0, 0);
     },
-    duration: 2000,
+    duration: pathname === "/" ? 2000 : 200,
     deps: [],
   });
 
