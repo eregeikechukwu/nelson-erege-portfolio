@@ -1,0 +1,15 @@
+.main {
+  background-color: var(--color-dark);
+}
+.container {
+  background: var(--color-dark);
+  padding-bottom: calc(var(--section-padding) / 3);
+  padding-top: calc(var(--section-padding) * 1.33);
+  padding-left: calc(var(--container-padding) * 2);
+  padding-right: calc(var(--container-padding) * 2);
+  margin: 0 auto;
+  max-width: 100em;
+
+  font-size: 4rem;
+  color: white;
+}

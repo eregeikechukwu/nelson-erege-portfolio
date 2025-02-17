@@ -1,12 +1,16 @@
-'use client';
+"use client";
 
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 const containerValue = ({ theme }) => theme?.breakpoints?.container;
 
 export const Container = styled.div`
   padding-inline: calc(clamp(2.5em, 8vw, 8em) * 2);
   margin-inline: auto;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 4rem;
+  }
 
   @media screen and (min-width: ${containerValue}) {
     max-width: ${containerValue};

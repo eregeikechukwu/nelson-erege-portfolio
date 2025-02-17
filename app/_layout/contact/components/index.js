@@ -1,2 +1,2 @@
-export * from './social-info';
-export * from './user-details';
+export * from "./social-info";
+export * from "./user-details";

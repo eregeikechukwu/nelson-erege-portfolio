@@ -45,7 +45,7 @@ export function Preloader() {
   //0.3
   return (
     <MotionComponent
-      className="fixed z-50 h-screen w-screen cursor-wait bg-foreground"
+      className="fixed z-50 h-screen w-screen cursor-wait bg-[var(--color-dark-dark)]"
       variants={slideUp}
       initial="initial"
       exit="exit"
@@ -105,7 +105,7 @@ export function Preloader() {
         </MotionComponent>
         <motion.svg className="absolute top-0 -z-10 h-[calc(100%+300px)] w-full">
           <motion.path
-            className="fill-foreground"
+            className="fill-[var(--color-dark-dark)]"
             variants={curve}
             initial="initial"
             exit="exit"

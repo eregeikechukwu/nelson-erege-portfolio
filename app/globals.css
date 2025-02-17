@@ -1,4 +1,4 @@
-@import 'next-cloudinary/dist/cld-video-player.css';
+@import "next-cloudinary/dist/cld-video-player.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,30 +20,16 @@
   }
 }
 
-@layer base {
-  /* Firefox */
-  * {
-    scrollbar-color: theme(colors.secondary.foreground)
-      theme(colors.secondary.DEFAULT);
-  }
+::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: theme(width[1.5]);
-  }
-
-  *::-webkit-scrollbar-track {
-    background-color: theme(colors.secondary.DEFAULT);
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: theme(colors.secondary.foreground);
-    border-radius: theme(borderRadius.full);
-
-    &:hover {
-      background-color: theme(colors.secondary.DEFAULT);
-    }
-  }
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+::-webkit-scrollbar-track {
+  display: none;
 }
 
 .flex-projects-col {
@@ -62,7 +48,7 @@
 }
 
 h4 {
-  font-family: 'Dennis Sans', sans-serif;
+  font-family: "Dennis Sans", sans-serif;
   font-weight: 450;
   font-style: normal;
   font-size: clamp(1.55em, 2.3vw, 2.5em);

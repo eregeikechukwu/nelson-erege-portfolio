@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from "react";
 
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
 
 /**
  * @param {Object} params
@@ -30,13 +30,13 @@ export function useFollowPointer({ modal, cursor, label }) {
 
   /** @type {(index: number) => void} */
   const handlePointerEnter = useCallback(
-    index => setItem({ active: true, index }),
+    (index) => setItem({ active: true, index }),
     [],
   );
 
   /** @type {(index: number) => void} */
   const handlePointerLeave = useCallback(
-    index => setItem({ active: false, index }),
+    (index) => setItem({ active: false, index }),
     [],
   );
 
@@ -53,35 +53,35 @@ export function useFollowPointer({ modal, cursor, label }) {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Move modal
-      xMoveModal.current = gsap.quickTo(modal.current, 'left', {
+      xMoveModal.current = gsap.quickTo(modal.current, "left", {
         duration: 0.8,
-        ease: 'power3',
+        ease: "power3",
       });
-      yMoveModal.current = gsap.quickTo(modal.current, 'top', {
+      yMoveModal.current = gsap.quickTo(modal.current, "top", {
         duration: 0.8,
-        ease: 'power3',
+        ease: "power3",
       });
 
       // Move cursor
-      xMoveCursor.current = gsap.quickTo(cursor.current, 'left', {
+      xMoveCursor.current = gsap.quickTo(cursor.current, "left", {
         duration: 0.7,
-        ease: 'power2.out',
+        ease: "power2.out",
         delay: 0.1,
       });
-      yMoveCursor.current = gsap.quickTo(cursor.current, 'top', {
+      yMoveCursor.current = gsap.quickTo(cursor.current, "top", {
         duration: 0.7,
-        ease: 'power2.out',
+        ease: "power2.out",
         delay: 0.1,
       });
 
       // Move cursor label
-      xMoveLabel.current = gsap.quickTo(label.current, 'left', {
-        duration: 0.6,
-        ease: 'power2',
+      xMoveLabel.current = gsap.quickTo(label.current, "left", {
+        duration: 0.59,
+        ease: "power2",
       });
-      yMoveLabel.current = gsap.quickTo(label.current, 'top', {
-        duration: 0.6,
-        ease: 'power2',
+      yMoveLabel.current = gsap.quickTo(label.current, "top", {
+        duration: 0.59,
+        ease: "power2",
       });
     });
 
