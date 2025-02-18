@@ -76,6 +76,17 @@ h4 {
   position: relative;
 }
 
+h5 {
+  font-family: "Dennis Sans", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  font-size: 0.6em;
+  line-height: 1.065;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 :root {
   --color-dark: #1c1d20;
   --color-dark-dark: #141517;
