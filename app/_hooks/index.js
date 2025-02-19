@@ -8,4 +8,5 @@ export * from "./use-parallax-slider";
 export * from "./use-project-slider";
 export * from "./use-slow-scroll";
 export * from "./use-time-out";
-export * from './use-hard-scroll';
+export * from "./use-hard-scroll";
+export * from "./use-ifempty";
