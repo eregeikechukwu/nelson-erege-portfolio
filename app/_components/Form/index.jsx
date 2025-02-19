@@ -1,160 +1,174 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 
 import { formFields } from "@/data";
 
 import styles from "./styles.module.scss";
 import { MagneticButton } from "../common";
+import { Field } from "./Field";
 
-function Field({ field, formData, handleChange, isError }) {
-  const [isEmpty, setIsEmpty] = useState(false);
-  const [isWrong, setIswrong] = useState(false);
+const initialState = {
+  name: "",
+  email: "",
+  company: "",
+  service: "",
+  message: "",
+  isWrong: false,
+  isError: false,
+  isEmpty: false,
+  status: "",
+};
 
-  const checkIfEmpty = function (e) {
-    const regex = /^[\s]*$/;
-    const boolean = regex.test(e.target.value);
-    setIsEmpty(!boolean);
-  };
+function formReducer(state, action) {
+  switch (action.type) {
+    case "UPDATE_FIELD":
+      return { ...state, [action.field]: action.value };
+    case "SET_STATUS":
+      return { ...state, status: action.value };
+    case "SET_ISWRONG":
+      return { ...state, isWrong: action.value };
+    case "SET_ISERROR":
+      return { ...state, isError: action.value };
+    case "SET_ISEMPTY":
+      return { ...state, isEmpty: action.value };
+    case "RESET_FORM":
+      return { initialState };
 
-  useEffect(() => {
-    console.log("The value chabged na");
-
-    isError &&
-      (() => {
-        if (field.name === "email") {
-          const emailData = formData.email;
-          const boolean = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
-            emailData,
-          );
-          setIswrong(!boolean);
-        }
-        if (field.name === "name") {
-          const nameData = formData.name;
-          const boolean = /^[\s]*$/.test(nameData);
-          setIswrong(boolean);
-        }
-      })();
-  }, [isError, formData]);
-
-  return (
-    <div className={`${styles.field} ${styles.flex_col}`}>
-      <h5>0{field.index}</h5>
-      <label for={field.name} style={{ opacity: `${isEmpty ? 0.33 : 1}` }}>
-        {field.label}
-      </label>
-      <input
-        name={field.name}
-        type={field.type}
-        value={formData[field.name]}
-        autoFocus="off"
-        onChange={(e) => {
-          handleChange(e);
-          checkIfEmpty(e);
-        }}
-        required={field.required}
-        placeholder={field.placeholder}
-      />
-      {field.required && isWrong && (
-        <div className={styles.error__message}>
-          <span>{field.errorMessage}</span>
-        </div>
-      )}
-    </div>
-  );
+    default:
+      return state;
+  }
 }
 
 export function Form() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    service: "",
-    message: "",
-  });
-  const [isError, setIsError] = useState(false);
-  const [isWrong, setIswrong] = useState(false);
-  const [isEmpty, setIsEmpty] = useState(false);
+  const [state, dispatch] = useReducer(formReducer, initialState);
 
-  const handleSubmit = function () {
-    const nameBoolean = !/^[\s]*$/.test(formData.name);
-    const emailBoolean = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
-      formData.email,
-    );
-    const messageBoolean =
-      formData.message.length > 4 && formData.message.length < 1000;
-
-    setIsError(!(nameBoolean && emailBoolean && messageBoolean));
+  //Error setter function
+  const errorSetter = function (nameBoolean, emailBoolean, messageBoolean) {
+    dispatch({
+      type: "SET_ISERROR",
+      value: !(nameBoolean && emailBoolean && messageBoolean),
+    });
   };
 
+  //Email sender function
+  const sendEmail = async function (e) {
+    dispatch({ type: "SET_STATUS", value: "Sending..." });
+    console.log("Email is to try sending now");
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(state),
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      dispatch({ type: "SET_STATUS", value: "Message sent successfully" });
+      dispatch({ type: "RESET_FORM" });
+      alert("Message sent successfully");
+    } else {
+      dispatch({
+        type: "SET_STATUS",
+        value: "Failed to send message, please try again later",
+      });
+      alert("Failed to send message, please try again later");
+    }
+  };
+  console.log(state.status);
+
+  const handleSubmit = function (e) {
+    e.preventDefault();
+    const nameBoolean = !/^[\s]*$/.test(state.name);
+    const emailBoolean = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
+      state.email,
+    );
+    const messageBoolean =
+      state.message.length > 4 && state.message.length < 1000;
+
+    //Setting general form error state
+    errorSetter(nameBoolean, emailBoolean, messageBoolean);
+
+    //MAIN EMAIL SENDER CALLER!!!!!
+    CallSender();
+  };
+
+  console.log(state.isError);
+
+  const CallSender = function () {
+    console.log(state.isError);
+    if (!state.isError) {
+      sendEmail();
+    }
+  };
+
+  //HANDLE FORM FIELDS CHANGE
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    dispatch({
+      type: "UPDATE_FIELD",
+      field: name,
+      value: value,
+    });
   };
 
   const checkIfEmpty = function (e) {
     const regex = /^[\s]*$/;
     const boolean = regex.test(e.target.value);
-    setIsEmpty(!boolean);
+    dispatch({ type: "SET_ISEMPTY", value: !boolean });
   };
 
   useEffect(() => {
-    isError &&
+    state.isError &&
       (() => {
-        const boolean =
-          formData.message.length > 3 && formData.message.length < 1000;
-        setIswrong(!boolean);
+        const boolean = state.message.length > 2 && state.message.length < 1000;
+        dispatch({ type: "SET_ISWRONG", value: !boolean });
       })();
-  }, [isError, formData]);
+  }, [state.isError, state.message]);
 
   return (
-    <form className={styles.form} noValidate>
+    <form className={styles.form} noValidate onSubmit={handleSubmit}>
       {formFields.map((field, index) => (
         <Field
           field={field}
           key={field.id}
-          formData={formData}
+          formData={state}
           handleChange={handleChange}
-          isError={isError}
+          isError={state.isError}
         />
       ))}
       <div
         className={`${styles.form__message} ${styles.flex_col} ${styles.field}`}
       >
         <h5>05</h5>
-        <label for="message" style={{ opacity: `${isEmpty ? 0.33 : 1}` }}>
+        <label
+          htmlFor="message"
+          style={{ opacity: `${state.isEmpty ? 0.33 : 1}` }}
+        >
           Your message
         </label>
         <textarea
           type="text"
           id="form-message"
           name="message"
-          value={formData.message}
+          value={state.message}
           onChange={(e) => {
             checkIfEmpty(e);
             handleChange(e);
           }}
           rows="7"
           required={true}
-          placeholder="Hello Dennis, can you help me with ... *"
+          placeholder="Hello Nelson, can you help me with ... *"
         />
-        {isWrong && (
+        {state.isWrong && (
           <div className={styles.error__message}>
             <span>Please enter a text between 3 and 3000 characters</span>
           </div>
         )}
       </div>
-      <div
-        className={styles.send}
-        onClick={(e) => {
-          e.preventDefault();
-          handleSubmit();
-          console.log(isError);
-        }}
-      >
+      <div className={styles.send}>
         <MagneticButton variant="primary" size="sd">
           Send it!
         </MagneticButton>
