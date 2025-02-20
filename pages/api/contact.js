@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     const mailOptions = {
       from: email,
       to: process.env.EMAIL_USER,
-      subject: `A contact form submission from ${name}, the company: ${company}`,
+      subject: `A contact form submission from ${name}, the company: ${company || "NOt specified"}`,
       text: `Name: ${name}\nEmail: ${email}\nService: ${service}\nMessage: ${message}`,
     };
 
@@ -35,3 +35,5 @@ export default async function handler(req, res) {
     return res.status(500).json({ message: "Internal Server Error" });
   }
 }
+
+///Successful Email Functionality. 💪💪✝️

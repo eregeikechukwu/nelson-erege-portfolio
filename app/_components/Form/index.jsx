@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 
 import { formFields } from "@/data";
 
@@ -17,6 +17,7 @@ const initialState = {
   isWrong: false,
   isError: false,
   isEmpty: false,
+  submit: false,
   status: "",
 };
 
@@ -32,8 +33,13 @@ function formReducer(state, action) {
       return { ...state, isError: action.value };
     case "SET_ISEMPTY":
       return { ...state, isEmpty: action.value };
+    case "SUBMIT":
+      return {
+        ...state,
+        submit: action.value,
+      };
     case "RESET_FORM":
-      return { initialState };
+      return initialState;
 
     default:
       return state;
@@ -42,7 +48,7 @@ function formReducer(state, action) {
 
 export function Form() {
   const [state, dispatch] = useReducer(formReducer, initialState);
-
+  const loadedRef = useRef(false);
   //Error setter function
   const errorSetter = function (nameBoolean, emailBoolean, messageBoolean) {
     dispatch({
@@ -54,7 +60,6 @@ export function Form() {
   //Email sender function
   const sendEmail = async function (e) {
     dispatch({ type: "SET_STATUS", value: "Sending..." });
-    console.log("Email is to try sending now");
 
     const response = await fetch("/api/contact", {
       method: "POST",
@@ -77,7 +82,6 @@ export function Form() {
       alert("Failed to send message, please try again later");
     }
   };
-  console.log(state.status);
 
   const handleSubmit = function (e) {
     e.preventDefault();
@@ -91,18 +95,19 @@ export function Form() {
     //Setting general form error state
     errorSetter(nameBoolean, emailBoolean, messageBoolean);
 
-    //MAIN EMAIL SENDER CALLER!!!!!
-    CallSender();
+    dispatch({ type: "SUBMIT", value: true });
   };
 
-  console.log(state.isError);
-
-  const CallSender = function () {
-    console.log(state.isError);
-    if (!state.isError) {
-      sendEmail();
+  useEffect(() => {
+    if (loadedRef.current === true && state.submit === true) {
+      //MAIN EMAIL SENDER CALLER!!!!!
+      !state.isError && sendEmail();
+    } else {
+      setTimeout(() => {
+        loadedRef.current = true;
+      }, 2000);
     }
-  };
+  }, [state.isError, state.submit]);
 
   //HANDLE FORM FIELDS CHANGE
   const handleChange = (e) => {
@@ -128,6 +133,11 @@ export function Form() {
       })();
   }, [state.isError, state.message]);
 
+  //Disable button function....
+  const disableButton = function () {
+    return state.status === "Sending..." ? true : false;
+  };
+
   return (
     <form className={styles.form} noValidate onSubmit={handleSubmit}>
       {formFields.map((field, index) => (
@@ -137,6 +147,7 @@ export function Form() {
           formData={state}
           handleChange={handleChange}
           isError={state.isError}
+          status={state.status}
         />
       ))}
       <div
@@ -169,7 +180,7 @@ export function Form() {
         )}
       </div>
       <div className={styles.send}>
-        <MagneticButton variant="primary" size="sd">
+        <MagneticButton variant="primary" disabled={disableButton()} size="sd">
           Send it!
         </MagneticButton>
       </div>

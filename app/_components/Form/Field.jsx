@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
 
-export function Field({ field, formData, handleChange, isError }) {
+export function Field({ field, formData, handleChange, isError, status }) {
   const [isEmpty, setIsEmpty] = useState(false);
   const [isWrong, setIswrong] = useState(false);
 
@@ -13,8 +13,16 @@ export function Field({ field, formData, handleChange, isError }) {
   };
 
   useEffect(() => {
-    console.log("The value chabged na");
+    // checkIfEmpty();
+  }, [formData[field.name]]);
 
+  useEffect(() => {
+    if (status !== "Message sent successfully" || status !== "sending") {
+      setIsEmpty(false);
+    }
+  }, [status]);
+
+  useEffect(() => {
     isError &&
       (() => {
         if (field.name === "email") {

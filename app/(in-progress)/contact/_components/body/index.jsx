@@ -2,6 +2,7 @@
 
 import { Form } from "@/app/_components/Form";
 
+import { Contacts } from "./contacts";
 import styles from "./styles.module.scss";
 
 function Body() {
@@ -10,7 +11,7 @@ function Body() {
       <div className={`${styles.form}`}>
         <Form />
       </div>
-      <div className={`${styles.contacts}`}></div>
+      <Contacts />
     </div>
   );
 }
