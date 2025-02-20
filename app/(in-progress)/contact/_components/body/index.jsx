@@ -5,7 +5,7 @@ import { Form } from "@/app/_components/Form";
 import { Contacts } from "./contacts";
 import styles from "./styles.module.scss";
 
-function Body() {
+export function Body() {
   return (
     <div className={`row ${styles.body}`}>
       <div className={`${styles.form}`}>
@@ -15,5 +15,3 @@ function Body() {
     </div>
   );
 }
-
-export { Body };

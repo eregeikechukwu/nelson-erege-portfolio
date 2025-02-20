@@ -59,6 +59,10 @@
   background: var(--color-dark);
   width: 100%;
   display: block;
+  &:nth-child(1) {
+    border-top: 1px solid var(--color-border-light);
+  }
+
   & textarea {
     overflow: scroll;
     margin-bottom: 2rem;

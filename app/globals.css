@@ -86,6 +86,7 @@ h5 {
   margin-bottom: 1em;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  opacity: 0.5;
 }
 
 :root {
