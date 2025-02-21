@@ -10,3 +10,4 @@ export * from "./use-slow-scroll";
 export * from "./use-time-out";
 export * from "./use-hard-scroll";
 export * from "./use-ifempty";
+export * from "./use-clock";

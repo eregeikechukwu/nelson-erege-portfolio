@@ -17,13 +17,14 @@ export function MagneticButton({
   className,
   variant,
   size,
+  translateRate = 1,
   maxwidth,
   ...props
 }) {
   /** @type {import('react').MutableRefObject<HTMLButtonElement>} */
   const elementRef = useRef(null);
   const {
-    position: { x, y },
+    position: { xinit, yinit },
     handleMagneticMove,
     handleMagneticOut,
   } = useMagnetic(elementRef);
@@ -36,6 +37,9 @@ export function MagneticButton({
     width: "max-content",
     wordBreak: "break-all",
   };
+
+  const x = xinit * translateRate;
+  const y = yinit * translateRate;
 
   return (
     <motion.button

@@ -3,6 +3,7 @@
 import { useEffect, useReducer, useRef, useState } from "react";
 
 import { formFields } from "@/data";
+import { useSlowScroll } from "@/hooks";
 
 import styles from "./styles.module.scss";
 import { MagneticButton } from "../common";
@@ -49,6 +50,11 @@ function formReducer(state, action) {
 export function Form() {
   const [state, dispatch] = useReducer(formReducer, initialState);
   const loadedRef = useRef(false);
+  const animatedButton = useRef(null);
+
+  //Send button SLow scroll implementation
+  useSlowScroll(animatedButton, 3, -100, 5);
+
   //Error setter function
   const errorSetter = function (nameBoolean, emailBoolean, messageBoolean) {
     dispatch({
@@ -179,7 +185,7 @@ export function Form() {
           </div>
         )}
       </div>
-      <div className={styles.send}>
+      <div className={styles.send} ref={animatedButton}>
         <MagneticButton variant="primary" disabled={disableButton()} size="sd">
           Send it!
         </MagneticButton>

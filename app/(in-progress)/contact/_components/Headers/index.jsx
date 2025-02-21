@@ -1,13 +1,22 @@
 "use client";
 
 import { MoveDownRight } from "lucide-react";
+import { motion } from "motion/react";
 
 import { Arrow, ProfilePicture } from "@/components";
 
+import { variants } from "../variants";
 import styles from "./styles.module.scss";
+
 function Headers() {
   return (
-    <div className={styles.headers}>
+    <motion.div
+      variants={variants}
+      initial="initial"
+      animate="animate"
+      transition={{ duration: 1.2 }}
+      className={styles.headers}
+    >
       <div className={`${styles.headers__head} flex-col`}>
         <h1 className={styles.headers__head__h1}>
           <span>
@@ -23,7 +32,7 @@ function Headers() {
           <Arrow />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

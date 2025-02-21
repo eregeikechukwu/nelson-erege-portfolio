@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-export function useSlowScroll(ref, duration = 3, transform, y = 0) {
+export function useSlowScroll(ref, duration = 3, transform = 10, y = 0) {
   //   const ref = useRef(null);
 
   useEffect(() => {

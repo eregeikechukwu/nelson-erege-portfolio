@@ -1,4 +1,4 @@
-import { InProgress } from "@/components";
+import { SocialInfo } from "@/app/_layout/contact/components";
 import { Navbar, Transition } from "@/layout";
 
 import { Body, Headers } from "./_components";
@@ -8,7 +8,7 @@ import styles from "./main.module.scss";
 export const metadata = {
   title: "Contact",
   description:
-    "Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Nelson",
+    "Helping brands thrive in the digital world. Located in The Nigeria. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Nelson",
 };
 
 export default function Contact() {
@@ -20,6 +20,7 @@ export default function Contact() {
           <Headers />
           <Body />
         </div>
+        <SocialInfo />
       </main>
     </Transition>
   );
