@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
+import { useRef } from "react";
 
-import { useFollowPointer } from '@/hooks';
+import { useFollowPointer } from "@/hooks";
 
 import {
   ThumbnailAction,
@@ -11,8 +11,8 @@ import {
   ThumbnailLabel,
   ThumbnailList,
   ThumbnailModal,
-} from './components';
-import { scaleUp } from './variants';
+} from "./components";
+import { scaleUp } from "./variants";
 
 export function Thumbnail() {
   /** @type {import('react').MutableRefObject<HTMLElement>} */
@@ -35,10 +35,11 @@ export function Thumbnail() {
 
   return (
     <section
-      className='container relative'
+      id="work"
+      className="container relative"
       onPointerMove={({ clientX, clientY }) => moveItems(clientX, clientY)}
     >
-      <div className='my-8 flex flex-col gap-10'>
+      <div className="my-8 flex flex-col gap-10">
         <ThumbnailLabel>Projects</ThumbnailLabel>
         <ThumbnailList
           handlePointerEnter={handlePointerEnter}
@@ -60,7 +61,7 @@ export function Thumbnail() {
           View
         </ThumbnailCursorLabel>
         <ThumbnailAction>
-          More work<sup className='text-muted-foreground'>14</sup>
+          More work<sup className="text-muted-foreground">14</sup>
         </ThumbnailAction>
       </div>
     </section>

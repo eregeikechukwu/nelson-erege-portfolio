@@ -11,3 +11,4 @@ export * from "./use-time-out";
 export * from "./use-hard-scroll";
 export * from "./use-ifempty";
 export * from "./use-clock";
+export * from "./use-route";

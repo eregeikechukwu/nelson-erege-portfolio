@@ -6,13 +6,13 @@ import {
   Project,
   Thumbnail,
   Transition,
-} from '@/layout';
+} from "@/layout";
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'Home | Nelson Erege',
+  title: "Home | Nelson Erege",
   description:
-    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Nelson',
+    "Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Nelson",
 };
 
 export default function Home() {

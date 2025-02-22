@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReactLenis, useLenis } from "lenis/dist/lenis-react";
 import { MoveDownRight } from "lucide-react";
+import Link from "next/link";
 import { CldImage } from "next-cloudinary";
 
 import { Globe, ParallaxSlider } from "@/components";
@@ -22,6 +23,7 @@ export function Header() {
 
   return (
     <ReactLenis duration={5} easing={(t) => Math.pow(t, 2)} root>
+      <Link href={"/#work"} id="worklink" className="hidden"></Link>
       <motion.header
         className="page relative h-screen overflow-hidden bg-secondary-foreground text-background md:h-[110vh]"
         variants={slideUp}
