@@ -33,14 +33,16 @@ export function Header() {
         initial="initial"
         animate={delay && slideUp.enter}
       >
-        <CldImage
-          src="Adobe_Express_-_file_l62pfw.png"
-          className={`header-image object-cover md:scale-125 md:object-contain ${styles.header__image}`}
-          ref={ref}
-          fill={true}
-          sizes="100vw"
-          alt="Dennis Snellenberg Personal Picture"
-        />
+        <div className={styles.header__image}>
+          <CldImage
+            src="Adobe_Express_-_file_l62pfw.png"
+            className={`header-image object-cover md:scale-125 md:object-contain`}
+            ref={ref}
+            fill={true}
+            sizes="100vw"
+            alt="Dennis Snellenberg Personal Picture"
+          />
+        </div>
 
         <div className="relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal">
           <motion.div
