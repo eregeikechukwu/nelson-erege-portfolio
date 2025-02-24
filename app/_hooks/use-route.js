@@ -25,9 +25,13 @@ export function RouteHandler() {
         // console.log(worklink + "       ", id);
 
         setTimeout(() => {
-          window.history.pushState(null, "", `#${id}`);
+          window.history.pushState(null, "", `/`);
           window.dispatchEvent(new HashChangeEvent("hashchange"));
         }, 2000);
+        setTimeout(() => {
+          window.history.pushState(null, "", `#${id}`);
+          window.dispatchEvent(new HashChangeEvent("hashchange"));
+        }, 3000);
 
         setTimeout(() => {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
