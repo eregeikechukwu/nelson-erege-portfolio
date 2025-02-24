@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -11,7 +11,7 @@ import Link from "next/link";
 import { CldImage } from "next-cloudinary";
 
 import { Globe, ParallaxSlider } from "@/components";
-import { useSlowScroll } from "@/hooks";
+import { useHashPath, useHeaderTranslate, useSlowScroll } from "@/hooks";
 
 import styles from "./header.module.scss";
 import { slideUp } from "./variants";
@@ -21,6 +21,9 @@ export function Header() {
 
   useSlowScroll(ref, 3, 230);
 
+  //Translate variants
+  const { slideUp, delay } = useHeaderTranslate();
+
   return (
     <ReactLenis duration={5} easing={(t) => Math.pow(t, 2)} root>
       <Link href={"/#work"} id="worklink" className="hidden"></Link>
@@ -28,7 +31,7 @@ export function Header() {
         className="page relative h-screen overflow-hidden bg-secondary-foreground text-background md:h-[110vh]"
         variants={slideUp}
         initial="initial"
-        animate="enter"
+        animate={delay && slideUp.enter}
       >
         <CldImage
           src="Adobe_Express_-_file_l62pfw.png"
@@ -40,7 +43,12 @@ export function Header() {
         />
 
         <div className="relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal">
-          <div className="select-none">
+          <motion.div
+            className="select-none"
+            variants={slideUp}
+            initial="initial"
+            animate={delay && slideUp.parallaxEnter}
+          >
             <h1 className="text-[max(9em,15vw)] md:mb-12">
               <ParallaxSlider repeat={4} baseVelocity={2}>
                 <span className="pe-12">
@@ -49,7 +57,7 @@ export function Header() {
                 </span>
               </ParallaxSlider>
             </h1>
-          </div>
+          </motion.div>
 
           <div className="md:flex">
             <div className={`${styles.hanger}`}>
@@ -101,7 +109,12 @@ export function Header() {
               </div>
             </div>
 
-            <div className="mx-10 max-md:my-12 md:absolute md:right-[-2%] md:top-[45%] md:ml-auto md:mr-16">
+            <motion.div
+              variants={slideUp}
+              initial="initial"
+              animate={delay && slideUp.parallaxEnter}
+              className="mx-10 max-md:my-12 md:absolute md:right-[-2%] md:top-[45%] md:ml-auto md:mr-16"
+            >
               <div className="mb-4 md:absolute md:top-[-12.5vh] md:mb-20">
                 <MoveDownRight size={28} strokeWidth={1.25} />
               </div>
@@ -110,7 +123,7 @@ export function Header() {
                 <span className="block">Freelance</span>
                 <span className="block">Designer &amp; Developer</span>
               </h4>
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.header>

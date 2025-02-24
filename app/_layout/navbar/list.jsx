@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+import clsx from "clsx";
 import { Dot } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -28,7 +29,10 @@ function NavLink({ href, title, isHovered }) {
           <span className="text-base capitalize">{title}</span>
           <Center>
             <Dot
-              className={`opacity-${opacity} scale-150 transition-opacity duration-200 ease-in-expo`}
+              className={clsx(
+                `scale-150 opacity-0 transition-opacity duration-200 ease-in-expo group-hover:opacity-100`,
+                { "opacity-100": isActive && !isHovered },
+              )}
             />
           </Center>
         </MagneticButton>

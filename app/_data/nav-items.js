@@ -8,7 +8,7 @@ export const navItems = [
     title: "work",
   },
   {
-    href: "/about",
+    href: "/#about",
     title: "about",
   },
   {

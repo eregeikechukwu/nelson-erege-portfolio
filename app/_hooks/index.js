@@ -12,3 +12,5 @@ export * from "./use-hard-scroll";
 export * from "./use-ifempty";
 export * from "./use-clock";
 export * from "./use-route";
+export * from "./use-hash-path";
+export * from "./use-header-translate";

@@ -1,38 +1,46 @@
 export const projectOptions = {
   first: [
     {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/rpmf9egswyd8563mxe9t',
+      type: "image",
+      source:
+        "https://th.bing.com/th/id/OIP.W-gReUloPt9GIvkpDcftHwHaEb?w=626&h=375&rs=1&pid=ImgDetMain",
     },
     {
-      type: 'video',
-      source: 'Dennis-Portfolio/videos/fldn3dntkusr22roeybr',
+      type: "video",
+      source:
+        "https://res.cloudinary.com/du0dbvljb/video/upload/v1740403870/home-item-4_irbwyx.mp4",
     },
     {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/k7bp2wbfmalpjfk3yk5q',
+      type: "image",
+      source:
+        "https://res.cloudinary.com/du0dbvljb/raw/upload/v1740404419/Dennis_Snellenberg_Freelance_Designer_Developer-1_tabtkh.html",
     },
     {
-      type: 'video',
-      source: 'Dennis-Portfolio/videos/x8w8sbohl5wkfuelmkhu',
+      type: "video",
+      source:
+        "https://res.cloudinary.com/du0dbvljb/video/upload/v1740403859/home-item-2_bd8obh.mp4",
     },
   ],
   second: [
     {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/r4kcbkvkl0djjt0mxmcw',
+      type: "image",
+      source:
+        "https://th.bing.com/th/id/OIP.W-gReUloPt9GIvkpDcftHwHaEb?w=626&h=375&rs=1&pid=ImgDetMain",
     },
     {
-      type: 'video',
-      source: 'Dennis-Portfolio/videos/q0yepc6dssbosmdk3isu',
+      type: "video",
+      source:
+        "https://res.cloudinary.com/du0dbvljb/video/upload/v1740403870/home-item-4_irbwyx.mp4",
     },
     {
-      type: 'image',
-      source: 'Dennis-Portfolio/images/ffoc9zsoeusptc7jcid5',
+      type: "image",
+      source:
+        "https://th.bing.com/th/id/OIP.RFUUK7R68ObvXEAQ-yERkQHaEo?rs=1&pid=ImgDetMain",
     },
     {
-      type: 'video',
-      source: 'Dennis-Portfolio/videos/usiswniv5qhgu2vamhnx',
+      type: "video",
+      source:
+        "https://res.cloudinary.com/du0dbvljb/video/upload/v1740403859/home-item-2_bd8obh.mp4",
     },
   ],
 };

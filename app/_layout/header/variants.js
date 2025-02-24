@@ -1,4 +1,5 @@
 /** @type {import('framer-motion').Variants} */
+// const delay = window.location.hash ? 0.7 : 2.5;
 export const slideUp = {
   initial: {
     y: 300,

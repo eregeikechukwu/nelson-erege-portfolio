@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
-import { Dot } from "lucide-react";
+import { Dot, WindIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { Center } from "@/components";
@@ -71,6 +71,8 @@ export function Preloader() {
       }
 
       const ochetraTimeout = function () {
+        console.log(window.location.hash ? true : false);
+
         timeouts.forEach((timeout, index) => {
           setTimeout(() => {
             setGreeting(preloaderWords[index + 1]);
@@ -79,17 +81,20 @@ export function Preloader() {
         });
       };
 
+      //Set transition title to pathName
       const setToPath = function () {
-        const array = path.split("").slice(1);
+        const array = !window.location.hash
+          ? path.split("").slice(1)
+          : window.location.hash.split("").slice(1);
         const greeting = array[0].toUpperCase() + array.slice(1).join("");
         setGreeting(greeting);
       };
 
       //Main Caller
-      path === "/" ? ochetraTimeout() : setToPath();
+      path === "/" && !window.location.hash ? ochetraTimeout() : setToPath();
 
       return;
-    }, []);
+    }, [path]);
 
     return (
       <>
