@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
-import { motion } from 'framer-motion';
-import { AnimatePresence } from 'framer-motion';
-import { usePathname } from 'next/navigation';
+import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
-import { MagneticButton } from '@/components';
-import { useOffcanvasToggle } from '@/hooks';
-import { cn } from '@/utils';
+import { MagneticButton } from "@/components";
+import { useOffcanvasToggle } from "@/hooks";
+import { cn } from "@/utils";
 
-import classes from './index.module.css';
+import classes from "./index.module.css";
 
 /**
  * @param {Object} props
@@ -26,7 +26,7 @@ export function OffcanvasToggle({ isOpen, handleOpen }) {
 
   const { scrollYProgress } = useOffcanvasToggle({
     element: containerRef,
-    callback: latest => latest <= 1 && handleOpen(false),
+    callback: (latest) => latest <= 1 && handleOpen(false),
   });
 
   const location = usePathname();
@@ -49,11 +49,10 @@ export function OffcanvasToggle({ isOpen, handleOpen }) {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       watchFunction();
     });
     watchFunction();
-    console.log('PathName changed');
   }, [location]);
 
   return (
@@ -70,15 +69,15 @@ export function OffcanvasToggle({ isOpen, handleOpen }) {
           }}
         >
           <MagneticButton
-            size='md'
-            variant='ghost'
-            className='border border-solid border-muted-foreground'
+            size="md"
+            variant="ghost"
+            className="border border-solid border-muted-foreground"
             onClick={() => handleOpen(!isOpen)}
           >
             <span
               className={cn([classes.burger], [isOpen && classes.burgerActive])}
             />
-            <span className='sr-only focus:not-sr-only'>Offcanvas Toggle</span>
+            <span className="sr-only focus:not-sr-only">Offcanvas Toggle</span>
           </MagneticButton>
         </motion.div>
       )}

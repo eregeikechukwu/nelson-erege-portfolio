@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useMotionValueEvent, useScroll } from 'framer-motion';
+import { useMotionValueEvent, useScroll } from "framer-motion";
 
 /**
  * @param {Object} params
@@ -10,11 +10,10 @@ import { useMotionValueEvent, useScroll } from 'framer-motion';
 export function useOffcanvasToggle({ element, callback }) {
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ['500px 500px', 'end start'],
+    offset: ["500px 500px", "end start"],
   });
-  // console.log(scrollYProgress);
 
-  useMotionValueEvent(scrollYProgress, 'change', callback);
+  useMotionValueEvent(scrollYProgress, "change", callback);
 
   return { scrollYProgress };
 }

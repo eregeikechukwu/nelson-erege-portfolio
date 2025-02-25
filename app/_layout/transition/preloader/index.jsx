@@ -14,7 +14,6 @@ import { fade, greetingFade, slideUp } from "./variants";
 
 const MotionComponent = motion(Center);
 
-console.log(preloaderWords);
 
 export function Preloader() {
   const { width, height } = useDimensions();
@@ -95,8 +94,6 @@ export function Preloader() {
       if (hasLoaded) {
         path === "/" && !hash ? ochetraTimeout() : setToPath();
       }
-
-      console.log(hasLoaded + "it has loaded");
 
       return;
     }, [path, hasLoaded, hashPath, hash]);

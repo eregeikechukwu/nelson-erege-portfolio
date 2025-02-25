@@ -12,7 +12,6 @@ export const useHashPath = function () {
     window.location.hash ? setHashPath(true) : setHashPath(false);
     setHasLoaded(true);
   }, []);
-  // console.log(hashPath);
 
   return { hashPath, hasLoaded, hash };
 };
