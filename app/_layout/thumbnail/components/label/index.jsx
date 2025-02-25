@@ -1,12 +1,10 @@
 /** @param {import('react').PropsWithChildren<unknown>} */
 export function ThumbnailLabel({ children }) {
   return (
-    <div
-      style={{
-        paddingInlineStart: 'clamp(2.5em, 3vw, 8em)',
-      }}
-    >
-      <h5 className='text-3xl text-secondary-foreground'>{children}</h5>
+    <div className="ps-[2rem] max-md:ps-0">
+      <h5 className="text-2xl text-secondary-foreground max-md:text-base">
+        {children}
+      </h5>
     </div>
   );
 }
