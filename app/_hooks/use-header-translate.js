@@ -6,11 +6,11 @@ import { useHashPath } from "./use-hash-path";
 
 export function useHeaderTranslate() {
   const [delay, setDelay] = useState(null);
-  const isHash = useHashPath();
+  const { hashPath, hash, hasLoaded } = useHashPath();
 
   useEffect(() => {
-    isHash ? setDelay(0.7) : setDelay(2.5);
-  }, [isHash]);
+    hasLoaded ? (hashPath ? setDelay(0.7) : setDelay(2.4)) : setDelay(0);
+  }, [hashPath, hasLoaded, hash]);
 
   const slideUp = {
     initial: {

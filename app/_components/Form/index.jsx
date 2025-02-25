@@ -53,7 +53,7 @@ export function Form() {
   const animatedButton = useRef(null);
 
   //Send button SLow scroll implementation
-  useSlowScroll(animatedButton, 3, -100, 5);
+  useSlowScroll(animatedButton, 3, -150, -55);
 
   //Error setter function
   const errorSetter = function (nameBoolean, emailBoolean, messageBoolean) {

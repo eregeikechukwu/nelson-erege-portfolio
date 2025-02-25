@@ -32,13 +32,13 @@ export function RouteHandler() {
             window.history.pushState(null, "", `#${id}`);
             window.dispatchEvent(new HashChangeEvent("hashchange"));
           },
-          isHash ? 700 : 2500,
+          isHash ? 210 : 2010,
         );
         setTimeout(
           () => {
             element.scrollIntoView({ behavior: "smooth", block: "start" });
           },
-          isHash ? 800 : 2600,
+          isHash ? 220 : 2020,
         );
       }
     }

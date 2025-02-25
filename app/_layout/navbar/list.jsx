@@ -12,18 +12,11 @@ import { navItems } from "@/data";
 import { randomId } from "@/utils";
 
 function NavLink({ href, title, isHovered }) {
-  const [opacity, setOpacity] = useState(0);
   const path = usePathname();
   const isActive = path === href;
 
-  useEffect(() => {
-    console.log(isHovered);
-
-    !isHovered ? (isActive ? setOpacity(100) : setOpacity(0)) : setOpacity(0);
-  }, [isHovered]);
-
   return (
-    <li className="group p-4">
+    <li className="group p-4 max-md:px-2">
       <Link href={href} passHref>
         <MagneticButton>
           <span className="text-base capitalize">{title}</span>
@@ -46,7 +39,7 @@ export function NavbarList() {
 
   return (
     <ul
-      className="flex items-center max-lg:hidden"
+      className="flex items-center max-sm:hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

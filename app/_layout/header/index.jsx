@@ -62,7 +62,7 @@ export function Header() {
           </motion.div>
 
           <div className="md:flex">
-            <div className={`${styles.hanger}`}>
+            <div className={`max-d:hidden ${styles.hanger}`}>
               <p>
                 <span>Located</span> <span>in</span> <span>Nigeria</span>
               </p>
@@ -115,9 +115,9 @@ export function Header() {
               variants={slideUp}
               initial="initial"
               animate={delay && slideUp.parallaxEnter}
-              className="mx-10 max-md:my-12 md:absolute md:right-[-2%] md:top-[45%] md:ml-auto md:mr-16"
+              className="mx-10 max-md:relative max-md:my-12 max-md:flex max-md:justify-between md:absolute md:right-[-2%] md:top-[45%] md:ml-auto md:mr-16"
             >
-              <div className="mb-4 md:absolute md:top-[-12.5vh] md:mb-20">
+              <div className="absolute top-[-12.5vh] mb-4 max-md:-top-12 md:mb-20">
                 <MoveDownRight size={28} strokeWidth={1.25} />
               </div>
 
@@ -125,6 +125,10 @@ export function Header() {
                 <span className="block">Freelance</span>
                 <span className="block">Designer &amp; Developer</span>
               </h4>
+
+              <div className="relative md:hidden">
+                <Globe />
+              </div>
             </motion.div>
           </div>
         </div>

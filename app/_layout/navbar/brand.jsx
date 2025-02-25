@@ -11,7 +11,7 @@ export function NavbarBrand() {
       <MagneticButton maxwidth={16}>
         <div className="group flex cursor-pointer items-center pb-5">
           <div className="transition-transform duration-500 ease-in-expo group-hover:rotate-[360deg]">
-            <Copyright />
+            <Copyright className="w-4" />
           </div>
 
           <div className="relative ms-2 flex overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-expo group-hover:pe-8">

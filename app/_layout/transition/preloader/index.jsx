@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 
 import { Center } from "@/components";
 import { preloaderWords } from "@/data";
-import { useDimensions, useTimeOut } from "@/hooks";
+import { useDimensions, useHashPath, useTimeOut } from "@/hooks";
 
 import { fade, greetingFade, slideUp } from "./variants";
 
@@ -56,6 +56,7 @@ export function Preloader() {
 
   function Greetings() {
     const [greeting, setGreeting] = useState(preloaderWords[0]);
+    const { hashPath, hasLoaded, hash } = useHashPath();
 
     const path = usePathname();
 
@@ -71,8 +72,6 @@ export function Preloader() {
       }
 
       const ochetraTimeout = function () {
-        console.log(window.location.hash ? true : false);
-
         timeouts.forEach((timeout, index) => {
           setTimeout(() => {
             setGreeting(preloaderWords[index + 1]);
@@ -83,18 +82,24 @@ export function Preloader() {
 
       //Set transition title to pathName
       const setToPath = function () {
-        const array = !window.location.hash
+        const array = !hashPath
           ? path.split("").slice(1)
-          : window.location.hash.split("").slice(1);
+          : hasLoaded
+            ? window.location.hash.split("").slice(1)
+            : "";
         const greeting = array[0].toUpperCase() + array.slice(1).join("");
         setGreeting(greeting);
       };
 
       //Main Caller
-      path === "/" && !window.location.hash ? ochetraTimeout() : setToPath();
+      if (hasLoaded) {
+        path === "/" && !hash ? ochetraTimeout() : setToPath();
+      }
+
+      console.log(hasLoaded + "it has loaded");
 
       return;
-    }, [path]);
+    }, [path, hasLoaded, hashPath, hash]);
 
     return (
       <>
@@ -105,7 +110,6 @@ export function Preloader() {
           animate="enter"
         >
           <Dot size={48} className="me-3" />
-          {/* <p>{preloaderWords[index]}</p> */}
           <p>{greeting}</p>
         </MotionComponent>
         <motion.svg className="absolute top-0 -z-10 h-[calc(100%+300px)] w-full">

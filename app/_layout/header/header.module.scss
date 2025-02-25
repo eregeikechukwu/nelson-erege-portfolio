@@ -12,6 +12,7 @@
     & img {
       width: auto;
       height: auto;
+      top: auto !important;
     }
   }
 }
@@ -22,6 +23,10 @@
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
+
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
 
   & svg {
     width: auto;

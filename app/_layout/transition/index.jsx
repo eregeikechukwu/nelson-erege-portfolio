@@ -16,20 +16,20 @@ export function Transition({ children }) {
   const scrollContainerRef = useRef(null);
 
   useHardScroll(0.05, 0.5);
-  const isHash = useHashPath();
+  const { hashPath } = useHashPath();
 
   // The duration is dynamic based on if the page has a hash or if ots the home page load
   useEffect(() => {
-    setDuration(pathname === "/" && !isHash ? 2000 : 200);
-  }, [isHash, pathname]);
+    setDuration(pathname === "/" && !hashPath ? 2000 : 200);
+  }, [hashPath, pathname]);
 
   useEffect(() => {
     duration !== 0 &&
       setTimeout(() => {
         setLoading(false);
-        !isHash ? window.scrollTo(0, 0) : null;
+        !hashPath ? window.scrollTo(0, 0) : null;
       }, duration);
-  }, [duration, isHash]);
+  }, [duration, hashPath]);
 
   return (
     <div ref={scrollContainerRef} className="h-auto overflow-auto">

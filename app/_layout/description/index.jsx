@@ -49,7 +49,7 @@ export function Description() {
           className="md:absolute md:left-[83%] md:top-full"
         >
           <div
-            className="absolute right-0 top-3/4 z-10 lg:top-[130%]"
+            className="max-md:top-20% absolute right-0 top-3/4 z-10 lg:top-[130%]"
             ref={ref}
           >
             <Link href="/about" passHref>
