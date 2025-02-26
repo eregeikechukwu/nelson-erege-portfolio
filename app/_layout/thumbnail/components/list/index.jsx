@@ -98,13 +98,15 @@ export function ThumbnailList({
                     key={`skill ${i}`}
                     className="mb-4 mr-5 flex w-auto min-w-16 items-center gap-[0.3rem]"
                   >
-                    <span className="text-xl font-extrabold">{item}</span>
+                    <span className="text-xl font-extrabold max-sm:text-[1rem]">
+                      {item}
+                    </span>
                     <Image
                       src={iconSrc}
                       alt={`${item}-icon`}
                       width={50}
                       height={50}
-                      style={{ width: "25px", height: "auto" }}
+                      style={{ height: "auto" }}
                     />
                   </div>
                 );

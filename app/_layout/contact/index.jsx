@@ -21,7 +21,10 @@ export function Contact() {
       className="relative max-h-screen bg-foreground text-background"
       style={{ y: transformY }}
     >
-      <div ref={contentRef} className="md:pb-[8.2rem] md:pt-24">
+      <div
+        ref={contentRef}
+        className="max-md:pb-0 max-md:pt-36 md:pb-36 md:pt-24"
+      >
         <UserDetails transformX={transformX} />
         <SocialInfo />
       </div>

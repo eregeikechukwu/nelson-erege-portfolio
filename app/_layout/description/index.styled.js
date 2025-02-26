@@ -16,6 +16,10 @@ export const Wrapper = styled.div`
     padding-block: clamp(4em, 12vw, 20em) clamp(5em, 14vh, 6em);
   }
 
+  @media screen and (max-width: 540px) {
+    padding-inline: 0;
+  }
+
   @media screen and (min-width: ${({ theme }) => theme?.breakpoints?.lg}) {
     flex-wrap: revert;
     margin: 0 auto 5rem;

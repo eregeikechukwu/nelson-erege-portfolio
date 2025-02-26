@@ -115,7 +115,7 @@ export function Header() {
               variants={slideUp}
               initial="initial"
               animate={delay && slideUp.parallaxEnter}
-              className="mx-10 max-md:relative max-md:my-12 max-md:flex max-md:justify-between md:absolute md:right-[-2%] md:top-[45%] md:ml-auto md:mr-16"
+              className="mx-10 max-md:relative max-md:my-12 max-md:flex max-md:justify-between max-sm:ml-4 md:absolute md:right-[-2%] md:top-[45%] md:ml-auto md:mr-16"
             >
               <div className="absolute top-[-12.5vh] mb-4 max-md:-top-12 md:mb-20">
                 <MoveDownRight size={28} strokeWidth={1.25} />

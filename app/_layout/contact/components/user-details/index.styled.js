@@ -11,6 +11,16 @@ export const Container = styled.div`
   @media screen and (min-width: 768px) {
     margin-bottom: 4rem;
   }
+  @media screen and (max-width: 720px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+  }
+  @media screen and (max-width: 540px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2rem;
+  }
 
   @media screen and (min-width: ${containerValue}) {
     max-width: ${containerValue};
@@ -22,6 +32,10 @@ export const Row = styled.div`
 
   &:nth-child(1) {
     padding-block-end: calc(var(--default-padding) / 2);
+
+    @media screen and (max-width: 720px) {
+      padding-bottom: 4rem;
+    }
   }
 
   &:nth-child(2) {

@@ -36,7 +36,7 @@ export function Thumbnail() {
   return (
     <section
       id="work"
-      className="container relative"
+      className="container relative max-sm:px-4"
       onPointerMove={({ clientX, clientY }) => moveItems(clientX, clientY)}
     >
       <div className="my-8 flex flex-col gap-0">

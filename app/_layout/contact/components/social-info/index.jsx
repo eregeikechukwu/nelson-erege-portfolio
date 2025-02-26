@@ -32,9 +32,9 @@ export function SocialInfo() {
   });
 
   return (
-    <div className="px-12 pb-4 pt-10 text-white">
-      <div className="flex flex-wrap items-stretch justify-between gap-5">
-        <div className="flex gap-8">
+    <div className="px-12 pb-4 pt-10 text-white max-md:px-8">
+      <div className="flex items-stretch justify-between gap-5 max-md:flex-col">
+        <div className="flex gap-8 max-md:order-2 max-md:justify-between">
           <div>
             <ListTitle>Version</ListTitle>
             <p className="mt-3">2025 © Edition</p>
@@ -47,9 +47,9 @@ export function SocialInfo() {
           </div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col max-md:border-b-[0.5px] max-md:border-solid max-md:border-b-gray-500 max-md:pb-8">
           <ListTitle>Socials</ListTitle>
-          <ul className="flex gap-8">{medias}</ul>
+          <ul className="flex gap-8 max-md:flex-wrap">{medias}</ul>
         </div>
       </div>
     </div>

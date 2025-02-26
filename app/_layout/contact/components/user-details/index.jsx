@@ -5,7 +5,7 @@ import { ArrowDownLeft } from "lucide-react";
 import Link from "next/link";
 import { CldImage } from "next-cloudinary";
 
-import { MagneticButton } from "@/components";
+import { MagneticButton, ProfilePicture } from "@/components";
 
 import { Container, ImageWrapper, MainTitle, Row } from "./index.styled";
 
@@ -18,14 +18,15 @@ export function UserDetails({ transformX }) {
     <Container>
       <Row>
         <div className="flex items-center gap-8">
-          <ImageWrapper>
+          {/* <ImageWrapper>
             <CldImage
               src="url(https://res.cloudinary.com/du0dbvljb/image/upload/v1739313600/cld-sample-2.png)"
               className="rounded-full object-cover"
               fill={true}
               alt="Dennis Snellenberg Profile Picture"
             />
-          </ImageWrapper>
+          </ImageWrapper> */}
+          <ProfilePicture />
           <MainTitle>Let’s work</MainTitle>
         </div>
         <div className="flex items-center justify-between">
@@ -39,7 +40,7 @@ export function UserDetails({ transformX }) {
       <Row>
         <div className="relative w-full">
           <div className="h-px bg-muted-foreground" />
-          <div className="absolute right-0 top-0 z-20 -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute right-0 top-0 z-20 -translate-x-1/2 -translate-y-1/2 max-md:-translate-x-1/4">
             <motion.div style={{ x: transformX }}>
               <Link href="/contact" passHref>
                 <MagneticButton
@@ -55,7 +56,7 @@ export function UserDetails({ transformX }) {
         </div>
       </Row>
 
-      <Row>
+      <Row className="max-md:mt-6">
         <div className="flex w-full flex-col gap-4 lg:flex-row">
           <div>
             <a href="mailto:info@dennissnellenberg.com">

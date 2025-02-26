@@ -105,8 +105,16 @@
     }
   }
 
-  &__skill {
+  &__stack {
     & .skill {
+    }
+
+    & img {
+      width: 25px;
+
+      @media screen and (max-width: 540px) {
+        width: 19px;
+      }
     }
   }
 }
