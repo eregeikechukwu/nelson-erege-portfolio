@@ -9,7 +9,7 @@ export function NavbarBrand() {
   return (
     <Link href={"/"}>
       <MagneticButton maxwidth={16}>
-        <div className="group flex cursor-pointer items-center pb-5">
+        <div className="group flex cursor-pointer items-center pb-5 max-sm:pb-0">
           <div className="transition-transform duration-500 ease-in-expo group-hover:rotate-[360deg]">
             <Copyright className="w-4" />
           </div>

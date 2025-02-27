@@ -8,6 +8,8 @@ import {
   Transition,
 } from "@/layout";
 
+import { CanvasProvider } from "./contexts/offCanvasContext";
+
 /** @type {import('next').Metadata} */
 export const metadata = {
   title: "Home | Nelson Erege",
@@ -17,15 +19,17 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <Transition>
-      <Navbar />
-      <Header />
-      <main>
-        <Description />
-        <Thumbnail />
-        <Project />
-      </main>
-      <Contact />
-    </Transition>
+    <CanvasProvider>
+      <Transition>
+        <Navbar />
+        <Header />
+        <main>
+          <Description />
+          <Thumbnail />
+          <Project />
+        </main>
+        <Contact />
+      </Transition>
+    </CanvasProvider>
   );
 }

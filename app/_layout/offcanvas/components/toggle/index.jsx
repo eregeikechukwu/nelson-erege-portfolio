@@ -55,9 +55,12 @@ export function OffcanvasToggle({ isOpen, handleOpen }) {
     watchFunction();
   }, [location]);
 
+  // console.log(isIntersecting);
+  console.log(isOpen + "  from offCanvas");
+
   return (
     <AnimatePresence>
-      {!isIntersecting ? null : (
+      {isIntersecting || isOpen ? (
         <motion.div
           ref={containerRef}
           className={classes.wrapper}
@@ -80,7 +83,7 @@ export function OffcanvasToggle({ isOpen, handleOpen }) {
             <span className="sr-only focus:not-sr-only">Offcanvas Toggle</span>
           </MagneticButton>
         </motion.div>
-      )}
+      ) : null}
     </AnimatePresence>
   );
 }

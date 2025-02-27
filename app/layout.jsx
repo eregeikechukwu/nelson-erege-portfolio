@@ -5,6 +5,7 @@ import { Providers } from "@/providers";
 
 import "./globals.css";
 import { RouteHandler } from "./_hooks";
+import { CanvasProvider } from "./contexts/offCanvasContext";
 
 /** @type {import('next').Metadata} */
 export const metadata = rootMetadata;
@@ -15,10 +16,12 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="ltr" className={neue_montreal.variable}>
       <body className={neue_montreal.className}>
         <RouteHandler />
-        <Providers>
-          <Offcanvas />
-          {children}
-        </Providers>
+        <CanvasProvider>
+          <Providers>
+            <Offcanvas />
+            {children}
+          </Providers>
+        </CanvasProvider>
       </body>
     </html>
   );

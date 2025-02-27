@@ -23,7 +23,7 @@ export function Description() {
   useSlowScroll(ref, 3, -180);
 
   return (
-    <article className="container relative" id="about">
+    <article className="container relative max-sm:px-[1.3rem]" id="about">
       <Wrapper>
         <div className="basis-full lg:basis-9/12">
           <Title>
