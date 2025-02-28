@@ -17,7 +17,7 @@ import classes from "./index.module.css";
  * @param {boolean} props.isOpen
  * @param {import('react').Dispatch<SetStateAction<boolean>>} props.handleOpen
  */
-export function OffcanvasToggle({ isOpen, handleOpen }) {
+export function OffcanvasToggle({ isOpen, handleOpen, handleNav }) {
   /** @type {import('react').MutableRefObject<HTMLDivElement>} */
   const containerRef = useRef(null);
   const scrollRef = useRef(false);
@@ -75,7 +75,7 @@ export function OffcanvasToggle({ isOpen, handleOpen }) {
             size="md"
             variant="ghost"
             className="border border-solid border-muted-foreground"
-            onClick={() => handleOpen(!isOpen)}
+            onClick={handleNav}
           >
             <span
               className={cn([classes.burger], [isOpen && classes.burgerActive])}

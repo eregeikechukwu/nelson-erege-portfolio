@@ -7,7 +7,7 @@ import { Dot } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { CanvasContext } from "@/app/contexts";
+import { CanvasContext, useCanvas } from "@/app/contexts";
 import { Center, MagneticButton } from "@/components";
 import { navItems } from "@/data";
 import { useNavOpen } from "@/hooks";
@@ -39,11 +39,15 @@ function NavLink({ href, title, isHovered }) {
 export function NavbarList() {
   const [isHovered, setIsHovered] = useState(false);
 
-  const { isNavOpen, setNavOpen } = useContext(CanvasContext);
+  // const { isNavOpen, setNavOpen } = useContext(CanvasContext);
 
-  const handleOpen = function () {
-    setNavOpen(!isNavOpen);
-  };
+  const { isNavOpen, setIsOpen, setNavOpen } = useCanvas();
+
+  // const { isNavOpen, setIsNavOpen, setNavOpen } = useNavOpen();
+
+  // const handleOpen = function () {
+  //   setNavOpen(!isNavOpen);
+  // // };
   console.log(isNavOpen + "  from navBarList");
 
   return (
@@ -57,9 +61,11 @@ export function NavbarList() {
           <NavLink href={href} title={title} isHovered={isHovered} key={id} />
         ))}
       </ul>
-      <div className="flex items-center gap-1 sm:hidden" onClick={handleOpen}>
+      <div className="flex items-center gap-1 sm:hidden" onClick={setIsOpen}>
         <Dot className="scale-150" />
-        <span>Menu</span>
+        <span className={clsx("z-50", { "text-red-600": isNavOpen })}>
+          Menu
+        </span>
       </div>
     </>
   );

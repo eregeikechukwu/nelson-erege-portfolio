@@ -1,21 +1,23 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { usePathname } from "next/navigation";
 
-export function useNavOpen() {
-  const [isOpen, setOpen] = useState(false);
+import { CanvasContext, useCanvas } from "../contexts";
 
+export function useNavOpen() {
+  // const [isOpen, setOpen] = useState(false);
+  const { isNavOpen, setNavOpen } = useCanvas();
   const pathname = usePathname();
 
-  const setIsOpen = function () {
-    setOpen(!isOpen);
+  const setIsNavOpen = function () {
+    setNavOpen((prevState) => !prevState);
   };
 
   useEffect(() => {
-    setOpen(false);
+    setIsNavOpen(false);
   }, [pathname]);
 
-  return { isOpen, setOpen };
+  return { isNavOpen, setIsNavOpen, setNavOpen };
 }

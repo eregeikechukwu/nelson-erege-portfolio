@@ -18,7 +18,9 @@ export function Offcanvas() {
   //   setOpen(false);
   // }, [pathname]);
 
-  const { isNavOpen, setNavOpen, setIsopen } = useContext(CanvasContext);
+  const { isNavOpen, setIsNavOpen, setNavOpen } = useNavOpen();
+
+  // const { isNavOpen, setNavOpen, setIsopen } = useContext(CanvasContext);
 
   console.log(isNavOpen + "  from offCanvas");
 
@@ -30,7 +32,7 @@ export function Offcanvas() {
       <OffcanvasToggle
         isOpen={isNavOpen}
         handleOpen={setNavOpen}
-        handleNav={setIsopen}
+        handleNav={setIsNavOpen}
       />
     </>
   );

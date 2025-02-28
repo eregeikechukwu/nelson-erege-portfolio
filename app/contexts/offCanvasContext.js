@@ -12,7 +12,7 @@ function CanvasProvider({ children }) {
   const pathname = usePathname();
 
   const setIsOpen = function () {
-    setNavOpen(!isNavOpen);
+    setNavOpen((prev) => !prev);
   };
 
   useEffect(() => {
@@ -21,7 +21,7 @@ function CanvasProvider({ children }) {
 
   return (
     <CanvasContext.Provider value={{ isNavOpen, setNavOpen, setIsOpen }}>
-      {console.log("From the context   " + isNavOpen)}
+      {console.log(isNavOpen)}
       {children}
     </CanvasContext.Provider>
   );
