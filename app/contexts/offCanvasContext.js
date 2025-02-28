@@ -8,6 +8,7 @@ const CanvasContext = createContext();
 
 function CanvasProvider({ children }) {
   const [isNavOpen, setNavOpen] = useState(false);
+  const [isClick, setIsClick] = useState(false);
 
   const pathname = usePathname();
 
@@ -18,6 +19,7 @@ function CanvasProvider({ children }) {
   useEffect(() => {
     setNavOpen(false);
   }, [pathname]);
+  console.log(isNavOpen + "  from canvasProvider");
 
   return (
     <CanvasContext.Provider value={{ isNavOpen, setNavOpen, setIsOpen }}>

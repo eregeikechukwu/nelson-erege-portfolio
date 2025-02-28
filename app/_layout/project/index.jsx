@@ -29,8 +29,8 @@ export function Project() {
 
   return (
     <section ref={containerRef} className="relative z-10 mt-14">
-      <div className="grid items-center">
-        <div className="bg-background">
+      <div className="grid items-center max-sm:h-[16.5rem]">
+        <div className="bg-background max-sm:pb-8">
           <motion.div
             className="mb-10 flex gap-10"
             style={{

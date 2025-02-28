@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useScroll, useTransform } from 'framer-motion';
+import { useScroll, useTransform } from "framer-motion";
 
 /** @param {import('react').MutableRefObject<HTMLElement>} element */
 export function useProjectSlider(element) {
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
 
   const transformX1 = useTransform(scrollYProgress, [0, 1], [0, -250]);

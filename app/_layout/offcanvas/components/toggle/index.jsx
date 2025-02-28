@@ -69,6 +69,12 @@ export function OffcanvasToggle({ isOpen, handleOpen, handleNav }) {
           exit={{ scale: 0 }}
           transition={{
             ease: [0.76, 0, 0.24, 1],
+            type: "spring", // Spring animation for bouncy feel
+            stiffness: 200, // Controls how stiff the spring is
+            damping: 20, // Controls how quickly it loses momentum
+            mass: isIntersecting || isOpen ? 2 : 0, // Controls the mass of the element
+            repeat: 0, // No repeat, only play once
+            repeatType: "reverse", //
           }}
         >
           <MagneticButton

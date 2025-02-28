@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-import { CanvasContext } from "@/app/contexts";
+import { CanvasContext, useCanvas } from "@/app/contexts";
 import { useNavOpen } from "@/hooks";
 
 import { OffcanvasBody, OffcanvasToggle } from "./components";
@@ -18,11 +18,15 @@ export function Offcanvas() {
   //   setOpen(false);
   // }, [pathname]);
 
-  const { isNavOpen, setIsNavOpen, setNavOpen } = useNavOpen();
+  const { setIsNavOpen, setNavOpen } = useNavOpen();
+
+  const { isNavOpen } = useCanvas();
 
   // const { isNavOpen, setNavOpen, setIsopen } = useContext(CanvasContext);
 
-  console.log(isNavOpen + "  from offCanvas");
+  useEffect(() => {
+    console.log(isNavOpen + "  from offCanvas");
+  }, [isNavOpen]);
 
   return (
     <>
