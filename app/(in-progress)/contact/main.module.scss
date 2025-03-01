@@ -9,4 +9,9 @@
   padding-right: calc(var(--container-padding) * 2);
   margin: 0 auto;
   max-width: 100em;
+
+  @media screen and (max-width: 720px) {
+    padding-left: 5rem;
+    padding-right: 4rem;
+  }
 }

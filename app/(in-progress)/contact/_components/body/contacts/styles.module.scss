@@ -6,6 +6,13 @@
   & h5 {
     color: var(--color-white);
   }
+
+  @media screen and (max-width: 720px) {
+    order: 1;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-left: 0;
+  }
 }
 .links_wrap {
   width: 100%;

@@ -43,8 +43,6 @@ export function NavbarList() {
 
   const { setIsNavOpen } = useNavOpen();
 
-  console.log(isNavOpen + " its from navBarList");
-
   return (
     <>
       <ul

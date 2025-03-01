@@ -8,12 +8,6 @@ import { StyledComponentsRegistry } from "./styled-components";
 
 /** @param {import('react').PropsWithChildren<unknown>} */
 export function Providers({ children }) {
-  // const { isNavOpen, setNavOpen } = useCanvas();
-
-  // useEffect(() => {
-  // console.log(isNavOpen + "  from providers");
-  // }, [isNavOpen]);
-
   return (
     <StyledComponentsRegistry>
       <BalancerProvider>{children}</BalancerProvider>

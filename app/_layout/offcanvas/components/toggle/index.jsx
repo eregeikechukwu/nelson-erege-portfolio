@@ -55,9 +55,6 @@ export function OffcanvasToggle({ isOpen, handleOpen, handleNav }) {
     watchFunction();
   }, [location]);
 
-  // console.log(isIntersecting);
-  console.log(isOpen + "  from offCanvas");
-
   return (
     <AnimatePresence>
       {isIntersecting || isOpen ? (

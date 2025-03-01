@@ -52,7 +52,7 @@ export function Contacts() {
         <Li>VAT: NL866034080B01</Li>
         <Li>Location: Owerri, Nigeria</Li>
       </ul>
-      <ul className={styles.links_wrap}>
+      <ul className={`${styles.links_wrap} max-md:!hidden`}>
         <Socials />
       </ul>
     </div>

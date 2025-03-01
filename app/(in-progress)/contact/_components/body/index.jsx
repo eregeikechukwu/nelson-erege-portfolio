@@ -15,7 +15,7 @@ export function Body() {
       initial="initial"
       animate="animate"
       transition={{ duration: 1.2, delay: 0.1 }}
-      className={`row ${styles.body}`}
+      className={`row max-md:flex-col ${styles.body}`}
     >
       <div className={`${styles.form}`}>
         <Form />

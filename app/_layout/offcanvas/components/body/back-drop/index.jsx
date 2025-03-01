@@ -22,13 +22,13 @@ export function OffcanvasBackdrop() {
       transition: {
         duration: 1,
         ease: [0.76, 0, 0.24, 1],
-        delay: 0.1,
+        delay: 0,
       },
     },
     exit: {
       d: initialPath,
       transition: {
-        duration: 0.8,
+        duration: 1,
         ease: [0.76, 0, 0.24, 1],
         delay: -0.2,
       },
@@ -36,7 +36,7 @@ export function OffcanvasBackdrop() {
   };
 
   return (
-    <motion.svg className="absolute right-[470px] top-0 h-screen w-40 fill-foreground stroke-none max-sm:right-[350px]">
+    <motion.svg className="absolute right-[470px] top-0 h-screen w-[6.4rem] fill-foreground stroke-none max-sm:right-[360px] max-sm:w-32">
       <motion.path
         variants={curve}
         initial="initial"

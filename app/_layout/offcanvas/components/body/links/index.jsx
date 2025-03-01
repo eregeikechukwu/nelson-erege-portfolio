@@ -20,7 +20,7 @@ export function OffcanvasLinks() {
     return (
       <motion.li
         key={id}
-        className="relative my-4 flex items-center md:mb-0"
+        className="relative my-6 flex items-center md:mb-0"
         variants={slideOut}
         custom={id}
         initial="initial"
@@ -29,7 +29,7 @@ export function OffcanvasLinks() {
         onPointerEnter={() => setActiveLink(href)}
       >
         <motion.div
-          className="absolute -left-14"
+          className="absolute max-sm:right-4 sm:-left-14"
           variants={scale}
           animate={activeLink === href ? "open" : "closed"}
         >
