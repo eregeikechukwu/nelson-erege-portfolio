@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export function OffcanvasBackdrop() {
   const windowHeight = window.innerHeight;
@@ -36,12 +36,12 @@ export function OffcanvasBackdrop() {
   };
 
   return (
-    <motion.svg className='absolute right-[600px] top-0 h-full w-24 fill-foreground stroke-none'>
+    <motion.svg className="absolute right-[470px] top-0 h-screen w-40 fill-foreground stroke-none max-sm:right-[350px]">
       <motion.path
         variants={curve}
-        initial='initial'
-        animate='enter'
-        exit='exit'
+        initial="initial"
+        animate="enter"
+        exit="exit"
       />
     </motion.svg>
   );

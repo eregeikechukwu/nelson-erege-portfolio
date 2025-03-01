@@ -9,6 +9,8 @@ export function Globe() {
   const { isNavOpen, setIsOpen } = useCanvas();
   const { setIsNavOpen } = useNavOpen();
 
+  console.log(isNavOpen + "  from globe");
+
   return (
     <div className={styles.globe} onClick={setIsNavOpen}>
       <div className={styles.globe__wrap}>

@@ -19,17 +19,15 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <CanvasProvider>
-      <Transition>
-        <Navbar />
-        <Header />
-        <main>
-          <Description />
-          <Thumbnail />
-          <Project />
-        </main>
-        <Contact />
-      </Transition>
-    </CanvasProvider>
+    <Transition>
+      <Navbar />
+      <Header />
+      <main>
+        <Description />
+        <Thumbnail />
+        <Project />
+      </main>
+      <Contact />
+    </Transition>
   );
 }

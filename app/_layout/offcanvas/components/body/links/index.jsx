@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-import { motion } from 'framer-motion';
-import { Dot } from 'lucide-react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { motion } from "framer-motion";
+import { Dot } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-import { navItems } from '@/data';
+import { navItems } from "@/data";
 
-import { scale, slideOut } from './variants';
+import { scale, slideOut } from "./variants";
 
 export function OffcanvasLinks() {
   const pathname = usePathname();
@@ -20,22 +20,25 @@ export function OffcanvasLinks() {
     return (
       <motion.li
         key={id}
-        className='relative my-4 flex items-center'
+        className="relative my-4 flex items-center md:mb-0"
         variants={slideOut}
         custom={id}
-        initial='initial'
-        animate='enter'
-        exit='exit'
+        initial="initial"
+        animate="enter"
+        exit="exit"
         onPointerEnter={() => setActiveLink(href)}
       >
         <motion.div
-          className='absolute -left-11'
+          className="absolute -left-14"
           variants={scale}
-          animate={activeLink === href ? 'open' : 'closed'}
+          animate={activeLink === href ? "open" : "closed"}
         >
-          <Dot size={36} />
+          <Dot size={52} />
         </motion.div>
-        <Link href={href} className='text-6xl capitalize'>
+        <Link
+          href={href}
+          className="text-[2.5rem] capitalize leading-9 max-sm:text-[2.8rem]"
+        >
           {title}
         </Link>
       </motion.li>
@@ -43,13 +46,12 @@ export function OffcanvasLinks() {
   });
 
   return (
-    <div className='mt-20 flex flex-col gap-3'>
-      <div className='mb-10 border-b border-solid'>
-        <h5 className='text-xs uppercase text-secondary-foreground'>
-          Navigation
-        </h5>
+    <div className="mt-2 flex flex-col gap-3 max-sm:mt-20">
+      <div className="mb-4 border-b border-solid border-gray-500 pb-5 max-sm:mb-0 max-sm:pb-4">
+        <h5 className="text-[0.6rem] uppercase text-white">Navigation</h5>
       </div>
       <ul onPointerLeave={() => setActiveLink(pathname)}>{items}</ul>
     </div>
   );
 }
+//1209 x 634 layout
