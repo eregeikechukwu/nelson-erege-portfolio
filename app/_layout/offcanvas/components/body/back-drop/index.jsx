@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 
+import styles from "./style.module.scss";
+
 export function OffcanvasBackdrop() {
   const windowHeight = window.innerHeight;
 
@@ -20,7 +22,7 @@ export function OffcanvasBackdrop() {
     enter: {
       d: targetPath,
       transition: {
-        duration: 1,
+        duration: 1.3,
         ease: [0.76, 0, 0.24, 1],
         delay: 0,
       },
@@ -28,7 +30,7 @@ export function OffcanvasBackdrop() {
     exit: {
       d: initialPath,
       transition: {
-        duration: 1,
+        duration: 1.2,
         ease: [0.76, 0, 0.24, 1],
         delay: -0.2,
       },
@@ -36,7 +38,9 @@ export function OffcanvasBackdrop() {
   };
 
   return (
-    <motion.svg className="absolute right-[470px] top-0 h-screen w-[6.4rem] fill-foreground stroke-none max-sm:right-[360px] max-sm:w-32">
+    <motion.svg
+      className={`absolute top-0 h-screen fill-foreground stroke-none ${styles.backdrop}`}
+    >
       <motion.path
         variants={curve}
         initial="initial"

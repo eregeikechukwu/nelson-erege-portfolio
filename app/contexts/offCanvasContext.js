@@ -2,21 +2,14 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
-import { usePathname } from "next/navigation";
-
 const CanvasContext = createContext();
 
 function CanvasProvider({ children }) {
   const [isNavOpen, setNavOpen] = useState(false);
-  const pathname = usePathname();
 
   const setIsOpen = function () {
     setNavOpen((prev) => !prev);
   };
-
-  useEffect(() => {
-    setNavOpen(false);
-  }, [pathname]);
 
   return (
     <CanvasContext.Provider value={{ isNavOpen, setNavOpen, setIsOpen }}>

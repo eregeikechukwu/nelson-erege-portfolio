@@ -11,9 +11,15 @@ import { useNavOpen } from "@/hooks";
 import { OffcanvasBody, OffcanvasToggle } from "./components";
 
 export function Offcanvas() {
+  const pathname = usePathname();
+
   const { setIsNavOpen, setNavOpen } = useNavOpen();
 
   const { isNavOpen } = useCanvas();
+
+  useEffect(() => {
+    setNavOpen(false);
+  }, [pathname]);
 
   return (
     <>

@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   align-items: stretch;
 
   justify-content: space-between;
@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
 
   @media screen and (max-width: 720px) {
     padding-block: clamp(4em, 12vw, 20em) clamp(5em, 14vh, 6em);
+    flex-wrap: wrap;
   }
 
   @media screen and (max-width: 540px) {

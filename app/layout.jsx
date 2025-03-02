@@ -16,12 +16,12 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="ltr" className={neue_montreal.variable}>
       <body className={neue_montreal.className}>
         <RouteHandler />
-        <Providers>
-          <CanvasProvider>
+        <CanvasProvider>
+          <Providers>
             <Offcanvas />
             {children}
-          </CanvasProvider>
-        </Providers>
+          </Providers>
+        </CanvasProvider>
       </body>
     </html>
   );

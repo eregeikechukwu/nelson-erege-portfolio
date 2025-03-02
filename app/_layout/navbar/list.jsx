@@ -56,9 +56,7 @@ export function NavbarList() {
       </ul>
       <div className="flex items-center gap-1 sm:hidden" onClick={setIsNavOpen}>
         <Dot className="scale-150" />
-        <span className={clsx("z-50", { "text-red-600": isNavOpen })}>
-          Menu
-        </span>
+        <span>Menu</span>
       </div>
     </>
   );

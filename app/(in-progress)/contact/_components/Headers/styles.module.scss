@@ -29,11 +29,14 @@
 
       & :nth-child(1) {
         & div {
-          margin-right: 0.125em;
-          height: 0.85em;
-          width: 0.85em;
+          margin-right: 0.27em;
+          height: 0.9em;
+          width: 0.9em;
           transform: translateY(0.09em);
           display: none;
+          @media screen and (max-width: 720px) {
+            display: inline-block;
+          }
         }
       }
     }
@@ -44,11 +47,26 @@
     padding-left: calc(var(--container-padding) / 2);
     padding-top: calc(clamp(3.25em, 7vw, 8em) * 0.875 * 1.175);
 
+    @media screen and (max-width: 720px) {
+      width: auto;
+      padding: 0;
+    }
+
+    & :first-child {
+      @media screen and (max-width: 720px) {
+        display: none;
+      }
+    }
+
     & .arrow {
       position: absolute;
       bottom: calc(var(--section-padding) * -0.05);
       transform: translateY(-50%);
       width: clamp(0.9em, 1vw, 1.1em);
+
+      @media screen and (max-width: 720px) {
+        bottom: 0;
+      }
 
       & svg {
         display: block;
