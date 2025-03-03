@@ -14,7 +14,6 @@ import { fade, greetingFade, slideUp } from "./variants";
 
 const MotionComponent = motion(Center);
 
-
 export function Preloader() {
   const { width, height } = useDimensions();
   const [isLoaded, setIsloaded] = useState(false);
@@ -101,12 +100,12 @@ export function Preloader() {
     return (
       <>
         <MotionComponent
-          className="text-3xl text-background md:text-4xl"
+          className="relative text-3xl text-background md:text-4xl"
           variants={greetingFade}
           initial="initial"
           animate="enter"
         >
-          <Dot size={48} className="me-3" />
+          <Dot size={48} className="absolute -left-10 me-3" />
           <p>{greeting}</p>
         </MotionComponent>
         <motion.svg className="absolute top-0 -z-10 h-[calc(100%+300px)] w-full">

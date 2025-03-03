@@ -15,6 +15,10 @@
     font-weight: 500;
     padding-top: 1.66em;
     transition: all 0.2s ease-in-out;
+
+    @media screen and (max-width: 720px) {
+      padding-top: 1.5em;
+    }
   }
 }
 .flex_col {
@@ -24,6 +28,10 @@
   border-bottom: 1px solid var(--color-border-light);
   padding: 0 2.75em;
   position: relative;
+
+  @media screen and (max-width: 720px) {
+    padding: 0 1.5em;
+  }
 }
 
 .error__message {
@@ -88,6 +96,10 @@
     display: block;
     margin-top: -0.33em;
     background: transparent !important;
+
+    @media screen and (max-width: 720px) {
+      padding: 0.8em 0 1.6em;
+    }
 
     &::placeholder {
       opacity: 0.5;

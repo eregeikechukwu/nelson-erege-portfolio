@@ -11,8 +11,9 @@
   max-width: 100em;
 
   @media screen and (max-width: 720px) {
-    padding-left: 5.5rem;
-    padding-right: 4rem;
-    padding-top: 11rem;
+    padding: 11rem 3.8rem 0 4.6rem;
+  }
+  @media screen and (max-width: 540px) {
+    padding: 11rem 0.9rem 0 1.3rem;
   }
 }

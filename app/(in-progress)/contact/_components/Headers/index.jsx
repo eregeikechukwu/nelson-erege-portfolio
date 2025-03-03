@@ -24,6 +24,9 @@ function Headers() {
             Let&#39;s start a&nbsp;
           </span>
           <span>project together</span>
+          <div className="absolute -top-10 right-0 w-1 rotate-[85deg] md:hidden">
+            <Arrow />
+          </div>
         </h1>
       </div>
       <div className={`${styles.headers__profilepic} flex-col`}>
