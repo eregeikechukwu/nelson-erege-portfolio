@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   padding-block: clamp(4em, 12vw, 20em) clamp(5em, 14vh, 16em);
 
   @media screen and (min-width: 1024px) {
-    padding-inline: 9rem;
+    padding-inline: 7rem;
   }
 
   @media screen and (max-width: 720px) {
