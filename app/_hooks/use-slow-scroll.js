@@ -40,8 +40,8 @@ export function useSlowScroll(
   }, [ref]);
 }
 
-document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible") {
-    ScrollTrigger.refresh();
-  }
-});
+// document.addEventListener("visibilitychange", () => {
+//   if (document.visibilityState === "visible") {
+//     ScrollTrigger.refresh();
+//   }
+// });

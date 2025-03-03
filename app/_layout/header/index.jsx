@@ -19,7 +19,7 @@ import { slideUp } from "./variants";
 export function Header() {
   const ref = useRef(null);
 
-  useSlowScroll(ref, 3, 230);
+  useSlowScroll(ref, 3, 370);
 
   //Translate variants
   const { slideUp, delay } = useHeaderTranslate();
@@ -35,7 +35,7 @@ export function Header() {
       >
         <div className={styles.header__image}>
           <CldImage
-            src="Adobe_Express_-_file_l62pfw.png"
+            src="https://res.cloudinary.com/du0dbvljb/image/upload/v1741020392/result_4_nndg3d.png"
             className={`header-image object-cover md:scale-125 md:object-contain`}
             ref={ref}
             fill={true}

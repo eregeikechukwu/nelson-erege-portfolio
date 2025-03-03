@@ -10,10 +10,14 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   gap: 2.5rem;
   padding-block: clamp(4em, 12vw, 20em) clamp(5em, 14vh, 16em);
-  padding-inline: clamp(2.5em, 4vw, 8em);
+
+  @media screen and (min-width: 1024px) {
+    padding-inline: 9rem;
+  }
 
   @media screen and (max-width: 720px) {
     padding-block: clamp(4em, 12vw, 20em) clamp(5em, 14vh, 6em);
+    padding-inline: clamp(2.5em, 4vw, 8em);
     flex-wrap: wrap;
   }
 
