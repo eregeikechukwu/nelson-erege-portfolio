@@ -15,9 +15,11 @@ export function useSlowScroll(
   //   const ref = useRef(null);
 
   useEffect(() => {
+    // ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+
     gsap.registerPlugin(ScrollTrigger);
     gsap.set(ref.current, { y: y });
-    gsap.to(ref.current, {
+    const tl = gsap.to(ref.current, {
       backgroundPosition: "centre -100px",
       y: transform,
       duration: duration,
@@ -27,7 +29,19 @@ export function useSlowScroll(
         start: "top bottom",
         end: "bottom top",
         scrub: true,
+        invalidateOnRefresh: true,
       },
     });
+
+    return () => {
+      tl.kill();
+      // ScrollTrigger.killAll();
+    };
   }, [ref]);
 }
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") {
+    ScrollTrigger.refresh();
+  }
+});
