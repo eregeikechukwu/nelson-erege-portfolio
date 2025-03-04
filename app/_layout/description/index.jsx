@@ -47,7 +47,7 @@ export function Description() {
           transition={{
             duration: 0.5,
           }}
-          className="md:absolute md:left-[83%] md:top-full"
+          className="md:absolute md:left-[83%] md:top-3/4"
         >
           <div
             className="max-md:top-20% absolute right-0 top-3/4 z-10 lg:top-[130%]"

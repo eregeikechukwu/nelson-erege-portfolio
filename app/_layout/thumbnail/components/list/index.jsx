@@ -46,7 +46,7 @@ export function ThumbnailList({
   moveItems,
 }) {
   const items = thumbnailOptions.map(
-    ({ href, title, stack, writeup }, index) => {
+    ({ href, title, stack, writeup, image }, index) => {
       const id = index;
       return (
         <li
@@ -80,8 +80,7 @@ export function ThumbnailList({
                   <div
                     className={`${styles.overlay__image} overlay-projects`}
                     style={{
-                      backgroundImage:
-                        "url(https://res.cloudinary.com/du0dbvljb/image/upload/v1739313600/cld-sample-2.png)",
+                      backgroundImage: `url(${image})`,
                     }}
                   ></div>
                 </div>

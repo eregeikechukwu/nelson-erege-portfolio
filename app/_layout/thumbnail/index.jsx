@@ -60,8 +60,8 @@ export function Thumbnail() {
         <ThumbnailCursorLabel ref={label} variants={scaleUp} active={active}>
           View
         </ThumbnailCursorLabel>
-        <ThumbnailAction>
-          More work<sup className="text-muted-foreground">14</sup>
+        <ThumbnailAction className="group">
+          More work<sup className="group-hover:text-background">35</sup>
         </ThumbnailAction>
       </div>
     </section>
