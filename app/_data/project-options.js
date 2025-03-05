@@ -3,7 +3,7 @@ export const projectOptions = {
     {
       type: "image",
       source:
-        "https://th.bing.com/th/id/OIP.W-gReUloPt9GIvkpDcftHwHaEb?w=626&h=375&rs=1&pid=ImgDetMain",
+        "https://res.cloudinary.com/du0dbvljb/image/upload/v1741173378/Screenshot_2025-03-05_121529_sehdvu.png",
     },
     {
       type: "video",
@@ -20,7 +20,7 @@ export const projectOptions = {
       source:
         "https://res.cloudinary.com/du0dbvljb/video/upload/v1740403859/home-item-2_bd8obh.mp4",
     },
-  ],
+  ],z
   second: [
     {
       type: "image",

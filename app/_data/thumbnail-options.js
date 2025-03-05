@@ -3,8 +3,8 @@ export const thumbnailOptions = [
     href: "https://worldwise-jonas.netlify.app",
     title: "WORLDWISE",
     image:
-      "https://res.cloudinary.com/du0dbvljb/image/upload/v1741096712/Profile-picture_3_xktuyl.png",
-    stack: ["React", "Javascript", "CSS", "React", "Leaflet"],
+      "https://res.cloudinary.com/du0dbvljb/image/upload/v1741155162/worldwise_oqnbea.png",
+    stack: ["React", "Javascript", "CSS", "Leaflet"],
     writeup:
       "Worldwise is a travel tracking app built with React, allowing users to mark visited places on an interactive map. It uses React Router for navigation, the Context API for state management, and Leaflet for mapping. The project highlights performance optimizations and reusable components.",
     // writeup:
@@ -14,7 +14,7 @@ export const thumbnailOptions = [
     href: "https://raft-nelson-landing-page.vercel.app",
     title: "RAFT",
     image:
-      "https://res.cloudinary.com/du0dbvljb/image/upload/t_profile-edit/v1741093991/Profile-picture_3_exwy0m.jpg",
+      "https://res.cloudinary.com/du0dbvljb/image/upload/v1741153913/Profile-picture_vh8bkc.jpg",
     stack: ["React", "Javascript", "SCSS"],
     writeup:
       "Raft landing page is a sleek animated site built with React, SCSS and Framer motion for smooth engaging transitions. It highlights Raft's project management features with fluid animations and a modern UI, enhacing user experience",
@@ -22,7 +22,8 @@ export const thumbnailOptions = [
   {
     href: "https://timbu-marketplace-nellify.vercel.app",
     title: "TIMBU CLOUD",
-    image: "Dennis-Portfolio/images/ahuzarh793qmv9sdveyk",
+    image:
+      "https://res.cloudinary.com/du0dbvljb/image/upload/v1741171047/Group_1_1_mkpuho.png",
     stack: ["HTML", "JavaScript", "SCSS", "Figma"],
     writeup:
       "Timbu Cloud is a modern E-Commerce platform that loads products dynamically from an external API. It includes a smooth shopping cart, secure checkout, and a simulated payment gateway for transaction testing. The platform highlights efficient API integration and strong front-end functionality.",
@@ -32,8 +33,9 @@ export const thumbnailOptions = [
   {
     href: "https://timbu-marketplace-nellify.vercel.app",
     title: "Portfolio",
-    image: "Dennis-Portfolio/images/pzychyr1ans60gqlevhg",
-    stack: ["Nextjs", "Tailwind", "SCSS", "React", "JavaScript", "Nodejs"],
+    image:
+      "https://res.cloudinary.com/du0dbvljb/image/upload/v1741172473/Group_1_1_wgkhap.png",
+    stack: ["Nextjs", "React", "JavaScript", "Tailwind", "SCSS", "Nodejs"],
     writeup:
       "A visually dynamic and interactive portfolio built with Next.js, React, TailwindCSS, SCSS, GSAP, and Framer Motion. It features smooth animations, seamless page transitions, an optimized UI, and a fully functional contact form using Next.js API routes for direct email communication.",
     // writeup:

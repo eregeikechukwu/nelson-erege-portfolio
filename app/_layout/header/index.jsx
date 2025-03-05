@@ -122,8 +122,8 @@ export function Header() {
               </div>
 
               <h4 className="text-[clamp(1.55em,2.4vw,2.75em)]">
-                <span className="block">Freelance</span>
-                <span className="block">Designer &amp; Developer</span>
+                <span className="block">Front-end</span>
+                <span className="block">Engineer &amp; Developer</span>
               </h4>
 
               <div className="relative md:hidden">
