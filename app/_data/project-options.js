@@ -8,7 +8,8 @@ export const projectOptions = {
     {
       type: "video",
       source:
-        "https://res.cloudinary.com/du0dbvljb/video/upload/v1740403870/home-item-4_irbwyx.mp4",
+        "https://res.cloudinary.com/du0dbvljb/video/upload/v1741214789/Nelson_Erege_s_Video_-_Mar_5_2025-VEED_r57nyl.mp4",
+      // #faf5f5
     },
     {
       type: "image",
@@ -18,7 +19,7 @@ export const projectOptions = {
     {
       type: "video",
       source:
-        "https://res.cloudinary.com/du0dbvljb/video/upload/v1740403859/home-item-2_bd8obh.mp4",
+        "https://res.cloudinary.com/du0dbvljb/video/upload/v1741280647/Untitled_design_qf26tg.mp4",
     },
   ],
   second: [
@@ -40,7 +41,7 @@ export const projectOptions = {
     {
       type: "video",
       source:
-        "https://res.cloudinary.com/du0dbvljb/video/upload/v1740403859/home-item-2_bd8obh.mp4",
+        "hhttps://res.cloudinary.com/du0dbvljb/video/upload/v1741283493/Untitled_design_1_nlsxvq.mp4",
     },
   ],
 };

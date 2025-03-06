@@ -1,5 +1,6 @@
 "use client";
 
+import { clsx } from "clsx";
 import { CldImage, CldVideoPlayer } from "next-cloudinary";
 
 import { Center } from "@/components";
@@ -35,7 +36,7 @@ export function ProjectSlider({ type, source }) {
 
   return (
     <Center
-      className="relative w-1/4 rounded"
+      className={clsx("relative w-1/4 rounded", {})}
       style={{
         minWidth: "150px",
         height: "20vw",
