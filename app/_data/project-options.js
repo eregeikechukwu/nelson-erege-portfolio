@@ -20,7 +20,7 @@ export const projectOptions = {
       source:
         "https://res.cloudinary.com/du0dbvljb/video/upload/v1740403859/home-item-2_bd8obh.mp4",
     },
-  ],z
+  ],
   second: [
     {
       type: "image",
