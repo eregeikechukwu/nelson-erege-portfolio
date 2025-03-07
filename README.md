@@ -11,20 +11,10 @@ My Portfolio site, implemented with [Next.js](https://nextjs.org/) and [Framer M
 
 <p>
 
-![GitHub top language](https://img.shields.io/github/languages/top/eregeikechukwu/nelson-erege-portfolio)&nbsp;
-![GitHub last commit](https://img.shields.io/github/last-commit/eregeikechukwu/nelson-erege-portfolio)&nbsp;
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/eregeikechukwu/nelson-erege-portfolio)&nbsp;
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/eregeikechukwu/nelson-erege-portfolio?display_name=tag)&nbsp;
-
-</p>
-
-<p>
-
 [Technologies](#-technologies) •
 [Demo](#-demo) •
 [Features](#-features) •
 [Pages](#-pages) •
-[Contributing](#-contributing) •
 [Links](#-links)
 
 </p>
@@ -70,7 +60,6 @@ You can visit and explore portfolio in the [Dennis Snellenberg Portfolio](https:
 - About
 - Contact
 - Work
-- Custom Not Found Page
 
 <p align="right">(<a href="#top">BACK TO TOP 🔝</a>)</p>
 
