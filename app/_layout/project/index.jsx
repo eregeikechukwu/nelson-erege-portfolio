@@ -29,10 +29,10 @@ export function Project() {
 
   return (
     <section ref={containerRef} className="relative z-10 mt-14">
-      <div className="grid items-center max-sm:h-[16.5rem]">
-        <div className="bg-background max-sm:pb-8">
+      <div className="grid items-center max-sm:h-4">
+        <div className="relative z-30 block bg-background max-sm:hidden max-sm:pb-8">
           <motion.div
-            className="mb-10 flex gap-10"
+            className="mb-10 flex gap-10 max-md:mb-4 max-md:gap-4"
             style={{
               width: "120vw",
               x: transformX1,
@@ -42,7 +42,7 @@ export function Project() {
           </motion.div>
 
           <motion.div
-            className="mb-10 flex gap-10"
+            className="mb-10 flex gap-10 max-md:gap-4"
             style={{
               width: "120vw",
               x: transformX2,

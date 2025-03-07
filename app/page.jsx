@@ -14,7 +14,7 @@ import { CanvasProvider } from "./contexts/offCanvasContext";
 export const metadata = {
   title: "Home | Nelson Erege",
   description:
-    "Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Nelson",
+    "Building consistent and engaging digital experiences. Located in Nigeria. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Nelson",
 };
 
 export default function Home() {

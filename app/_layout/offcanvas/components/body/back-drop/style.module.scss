@@ -1,10 +1,10 @@
 .backdrop {
-  right: 470px;
-  width: 6.4rem;
+  right: 430px;
+  width: 8rem;
 
   @media screen and (max-width: 540px) {
-    right: 425px;
-    width: 8rem;
+    right: 435px;
+    width: 11rem;
   }
   @media screen and (max-width: 435px) {
     right: 420px;
@@ -16,3 +16,22 @@
     right: 320px;
   }
 }
+
+// .backdrop {
+//   right: 470px;
+//   width: 6.4rem;
+
+//   @media screen and (max-width: 540px) {
+//     right: 425px;
+//     width: 8rem;
+//   }
+//   @media screen and (max-width: 435px) {
+//     right: 420px;
+//   }
+//   @media screen and (max-width: 380px) {
+//     right: 346px;
+//   }
+//   @media screen and (max-width: 350px) {
+//     right: 320px;
+//   }
+// }

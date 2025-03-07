@@ -4,44 +4,52 @@ export const projectOptions = {
       type: "image",
       source:
         "https://res.cloudinary.com/du0dbvljb/image/upload/v1741173378/Screenshot_2025-03-05_121529_sehdvu.png",
-    },
-    {
-      type: "video",
-      source:
-        "https://res.cloudinary.com/du0dbvljb/video/upload/v1741214789/Nelson_Erege_s_Video_-_Mar_5_2025-VEED_r57nyl.mp4",
-      // #faf5f5
-    },
-    {
-      type: "image",
-      source:
-        "https://res.cloudinary.com/du0dbvljb/raw/upload/v1740404419/Dennis_Snellenberg_Freelance_Designer_Developer-1_tabtkh.html",
+      //Tip calculator
     },
     {
       type: "video",
       source:
         "https://res.cloudinary.com/du0dbvljb/video/upload/v1741280647/Untitled_design_qf26tg.mp4",
+      //Natours video
+      // #faf5f5
+    },
+    {
+      type: "image",
+      source:
+        "https://res.cloudinary.com/du0dbvljb/image/upload/v1741340024/Bankist_banner_innpyg.png",
+      //Bankist
+    },
+    {
+      type: "video",
+      source:
+        "https://res.cloudinary.com/du0dbvljb/video/upload/v1741303587/Untitled_design_3_d3jua2.mp4",
+      //Pig game video
     },
   ],
   second: [
     {
-      type: "image",
-      source:
-        "https://th.bing.com/th/id/OIP.W-gReUloPt9GIvkpDcftHwHaEb?w=626&h=375&rs=1&pid=ImgDetMain",
-    },
-    {
       type: "video",
       source:
-        "https://res.cloudinary.com/du0dbvljb/video/upload/v1740403870/home-item-4_irbwyx.mp4",
+        "https://res.cloudinary.com/du0dbvljb/video/upload/v1741283493/Untitled_design_1_nlsxvq.mp4",
+      //Worldwise video
     },
     {
       type: "image",
       source:
-        "https://th.bing.com/th/id/OIP.RFUUK7R68ObvXEAQ-yERkQHaEo?rs=1&pid=ImgDetMain",
+        "https://res.cloudinary.com/du0dbvljb/image/upload/v1741340752/UsePopcorn_banner_e3hzy1.png",
+      //UsePopcorn
     },
     {
       type: "video",
       source:
-        "hhttps://res.cloudinary.com/du0dbvljb/video/upload/v1741283493/Untitled_design_1_nlsxvq.mp4",
+        "https://res.cloudinary.com/du0dbvljb/video/upload/v1741302582/Untitled_design_2_haj4ao.mp4",
+      //Raft video
+    },
+    {
+      type: "image",
+      source:
+        "https://res.cloudinary.com/du0dbvljb/image/upload/v1741341492/SunnySIde_banner_j7m6hl.png",
+      //SunnySide
     },
   ],
 };

@@ -18,14 +18,6 @@ export function UserDetails({ transformX }) {
     <Container>
       <Row>
         <div className="flex items-center gap-8">
-          {/* <ImageWrapper>
-            <CldImage
-              src="url(https://res.cloudinary.com/du0dbvljb/image/upload/v1739313600/cld-sample-2.png)"
-              className="rounded-full object-cover"
-              fill={true}
-              alt="Dennis Snellenberg Profile Picture"
-            />
-          </ImageWrapper> */}
           <ProfilePicture />
           <MainTitle>Let’s work</MainTitle>
         </div>
@@ -59,24 +51,24 @@ export function UserDetails({ transformX }) {
       <Row className="max-md:mt-6">
         <div className="flex w-full flex-col gap-4 lg:flex-row">
           <div>
-            <a href="mailto:info@dennissnellenberg.com">
+            <a href="mailto:eregeikechukwu@gmail.com">
               <MagneticButton
                 variant="outline"
                 size="mc"
                 className="w-full border-muted-foreground"
               >
-                info@dennissnellenberg.com
+                eregeikechukwu@gmail.com
               </MagneticButton>
             </a>
           </div>
           <div>
-            <a href="tel:+31627847430">
+            <a href="tel:+2347019211773">
               <MagneticButton
                 variant="outline"
                 size="mc"
                 className="w-full border-muted-foreground"
               >
-                +31 6 27 84 74 30
+                +234 701 921 1773
               </MagneticButton>
             </a>
           </div>

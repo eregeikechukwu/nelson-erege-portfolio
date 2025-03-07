@@ -1,11 +1,9 @@
 <div id='top' align="center">
 
-An Portfolio site template, implemented with [Next.js](https://nextjs.org/) and [Framer Motion](https://www.framer.com/motion/). Styled with [Tailwind CSS](https://tailwindcss.com/). This is one of my portfolios, but I would be pleased if these codes helped others, so I published it as an open-source project. feel free to explore it, and if you need help, ask me. I would respond as soon as possible.
+My Portfolio site, implemented with [Next.js](https://nextjs.org/) and [Framer Motion](https://www.framer.com/motion/). Styled with [Tailwind CSS](https://tailwindcss.com/) and [SCSS]().
 
 <p>
-  To support me, please create
-  <strong>Pull request</strong>
-  and give <strong>star⭐</strong>
+  To support me, please give a <strong>star⭐</strong>
   to this repository.
   <br/>
   I appreciate your support in advance. ❤
@@ -13,12 +11,10 @@ An Portfolio site template, implemented with [Next.js](https://nextjs.org/) and 
 
 <p>
 
-![GitHub top language](https://img.shields.io/github/languages/top/AliBagheri2079/dennis-snellenberg-portfolio)&nbsp;
-![GitHub last commit](https://img.shields.io/github/last-commit/AliBagheri2079/dennis-snellenberg-portfolio)&nbsp;
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/AliBagheri2079/dennis-snellenberg-portfolio)&nbsp;
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/AliBagheri2079/dennis-snellenberg-portfolio?display_name=tag)&nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/AliBagheri2079/dennis-snellenberg-portfolio?color=yellow)&nbsp;
-![GitHub forks](https://img.shields.io/github/forks/AliBagheri2079/dennis-snellenberg-portfolio)
+![GitHub top language](https://img.shields.io/github/languages/top/eregeikechukwu/nelson-erege-portfolio)&nbsp;
+![GitHub last commit](https://img.shields.io/github/last-commit/eregeikechukwu/nelson-erege-portfolio)&nbsp;
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/eregeikechukwu/nelson-erege-portfolio)&nbsp;
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/eregeikechukwu/nelson-erege-portfolio?display_name=tag)&nbsp;
 
 </p>
 
@@ -33,12 +29,6 @@ An Portfolio site template, implemented with [Next.js](https://nextjs.org/) and 
 
 </p>
 
-<img
-  src="./public/screen-record.gif"
-  loading="lazy"
-  alt="home page screenshot"
-/>
-
 </div>
 
 ## 🔧 Technologies
@@ -47,10 +37,12 @@ An Portfolio site template, implemented with [Next.js](https://nextjs.org/) and 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=for-the-badge&logo=javascript)&nbsp;
 ![Framer Motion](https://img.shields.io/badge/-FramerMotion-05122A?style=for-the-badge&logo=framer)&nbsp;
 ![Tailwind CSS](https://img.shields.io/badge/-TailwindCSS-05122A?style=for-the-badge&logo=tailwindCSS&logoColor=06B6D4)
+![SASS](https://img.shields.io/badge/-SaSS-05122A?style=for-the-badge&logo=sass&logoColor=06B6D4)&nbsp;
+![Node JS](https://img.shields.io/badge/-NodeJS-05122A?style=for-the-badge&logo=node.js&logoColor=06B6D4)
 
 ## ✨ Demo
 
-You can visit and explore portfolio in the [Dennis Snellenberg Portfolio](https://dennis-snellenberg-portfolio.vercel.app/) template.
+You can visit and explore portfolio in the [Dennis Snellenberg Portfolio](https://dennis-snellenberg-portfolio.vercel.app/) site.
 
 ## 🔥 Features
 
@@ -59,10 +51,13 @@ You can visit and explore portfolio in the [Dennis Snellenberg Portfolio](https:
 - Using Gsap with Lenis
 - Using React Wrap Balancer
 - Using Styled Component
+- Using Sass for styling
 - Using Tailwindcss with Custom Plugin
 - Using Postcss with Plugins
 - Using Clsx with twMerge
+- Using Node.js for contact form functionality
 - Fully responsive
+- Fully functional email contact form
 - Page Transition with Smooth Scrolling
 - Linting with Eslint and Stylelint
 - Format with Prettier
@@ -79,29 +74,16 @@ You can visit and explore portfolio in the [Dennis Snellenberg Portfolio](https:
 
 <p align="right">(<a href="#top">BACK TO TOP 🔝</a>)</p>
 
-## 🤝 Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## 🔗 Links
 
 <p>
-  <a href="https://github.com/AliBagheri2079">
+  <a href="https://github.com/eregeikechukwu">
     <img src="https://img.shields.io/badge/Github-000?style=flat&logo=github&logoColor=white"/>
   </a>
-  <a href="https://www.linkedin.com/in/alibagheri2079">
+  <a href="https://www.linkedin.com/in/nelson-erege-b979282a6">
     <img src="https://img.shields.io/badge/linkedin-0A66C2?style=flat&logo=linkedin&logoColor=white"/>
   </a>
-  <a href="https://twitter.com/AliBagheri2079">
+  <a href="https://twitter.com/EregeNelso40316">
     <img src="https://img.shields.io/badge/twitter-1DA1F2?style=flat&logo=twitter&logoColor=white"/>
   </a>
 </p>

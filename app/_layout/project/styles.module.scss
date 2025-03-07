@@ -5,6 +5,17 @@
   // clip-path: inset(0px -20px -20px -20px);
   position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+  }
+
   &::after {
     // content: "";
     position: absolute;

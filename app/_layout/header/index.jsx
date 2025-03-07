@@ -40,7 +40,7 @@ export function Header() {
             ref={ref}
             fill={true}
             sizes="100vw"
-            alt="Dennis Snellenberg Personal Picture"
+            alt="Nelson Erege Personal Picture"
           />
         </div>
 

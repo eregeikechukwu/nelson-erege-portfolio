@@ -1,16 +1,19 @@
 {
-  "name": "nelsonerege-portfolio",
+  "name": "nelson-erege-portfolio",
   "title": "Nelson Erege • Frontend Web Developer",
-  "description": "Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Nelson",
+  "description": "Building consistent and engaging digital experiences. Located in Nigeria. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Nelson",
   "author": {
-    "name": "Ali Bagheri",
-    "email": "alibagheri2079.dev@gmail.com",
-    "url": "https://www.github.com/alibagheri2079"
+    "name": "Nelson Erege",
+    "email": "eregeikechukwu@gmail.com",
+    "url": "https://www.github.com/eregeikechukwu"
   },
   "keywords": [
     "Design",
-    "Develope",
-    "Freelance"
+    "Developer",
+    "Engineer",
+    "Frontend",
+    "Web",
+    "Nelson Erege"
   ],
   "version": "0.1.0",
   "private": true,

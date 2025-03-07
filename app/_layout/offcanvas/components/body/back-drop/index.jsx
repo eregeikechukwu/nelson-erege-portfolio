@@ -24,7 +24,7 @@ export function OffcanvasBackdrop() {
       transition: {
         duration: 1.3,
         ease: [0.76, 0, 0.24, 1],
-        delay: 0,
+        delay: 0.17,
       },
     },
     exit: {

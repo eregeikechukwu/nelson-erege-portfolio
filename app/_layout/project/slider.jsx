@@ -36,11 +36,15 @@ export function ProjectSlider({ type, source }) {
 
   return (
     <Center
-      className={clsx("relative w-1/4 rounded", {})}
-      style={{
-        minWidth: "150px",
-        height: "20vw",
-      }}
+      className={clsx(
+        "relative w-1/4 min-w-[150px] rounded max-md:min-w-[260px]",
+        {},
+      )}
+      style={
+        {
+          // minWidth: "150px",
+        }
+      }
     >
       {image}
       {video}
