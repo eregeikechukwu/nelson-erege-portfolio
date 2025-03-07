@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ReactLenis, useLenis } from "lenis/dist/lenis-react";
+import { ReactLenis } from "lenis/dist/lenis-react";
 import { MoveDownRight } from "lucide-react";
 import Link from "next/link";
 import { CldImage } from "next-cloudinary";
