@@ -51,7 +51,7 @@ export function ThumbnailList({
       return (
         <li
           key={`thumbnail-list-${id}`}
-          className="border-t border-solid transition-all last-of-type:border-b"
+          className="border-t border-solid transition-all"
           style={
             {
               // paddingInline: 'calc(clamp(1em,3vw,4em) * 2)',

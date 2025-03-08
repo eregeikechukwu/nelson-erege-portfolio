@@ -5,7 +5,7 @@ import { Center, MagneticButton } from "@/components";
 /** @param {import('react').PropsWithChildren<unknown>} */
 export function ThumbnailAction({ children }) {
   return (
-    <Center className="relative z-10 bg-white">
+    <Center className="relative z-10 bg-white max-md:mb-4">
       <Link href="https://github.com/eregeikechukwu" passHref>
         <MagneticButton
           variant="outline"

@@ -26,7 +26,7 @@ export function Preloader() {
     height + 300
   } 0 ${height}  L0 0`;
   const targetPath = `M0 0 L${width} 0 L${width} ${height} Q${
-    width / 2
+    width * 2
   } ${height} 0 ${height}  L0 0`;
 
   /** @type {import('framer-motion').Variants} */
