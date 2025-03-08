@@ -53,11 +53,14 @@ export function Description() {
             className="max-md:top-20% absolute right-0 top-3/4 z-10 lg:top-[130%]"
             ref={ref}
           >
-            <Link href="/about" passHref>
+            <a
+              href="/Mark_Zuck_Jnr_Resume.pdf"
+              download="Nelson_Erege_Resume.pdf"
+            >
               <MagneticButton variant="ghost" size="ab">
-                About me
+                Resume
               </MagneticButton>
-            </Link>
+            </a>
           </div>
         </motion.div>
       </Wrapper>
