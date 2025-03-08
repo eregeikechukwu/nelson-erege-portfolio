@@ -32,7 +32,7 @@ My Portfolio site, implemented with [Next.js](https://nextjs.org/) and [Framer M
 
 ## ✨ Demo
 
-You can visit and explore portfolio in the [Dennis Snellenberg Portfolio](https://dennis-snellenberg-portfolio.vercel.app/) site.
+You can visit and explore my portfolio at [Nekson Erege Portfolio](https://nelson-erege-portfolio.vercel.app/).
 
 ## 🔥 Features
 
