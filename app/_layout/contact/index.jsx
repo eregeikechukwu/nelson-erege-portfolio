@@ -18,7 +18,7 @@ export function Contact() {
   return (
     <motion.footer
       ref={containerRef}
-      className="relative bg-foreground text-background md:max-h-screen"
+      className="relative h-auto bg-foreground text-background md:max-h-screen"
       style={{ y: transformY }}
     >
       <div
