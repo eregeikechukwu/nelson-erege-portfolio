@@ -23,6 +23,7 @@ export function useSlowScroll(
       backgroundPosition: "centre -100px",
       y: transform,
       duration: duration,
+      immediateRender: true,
       ease: "none",
       scrollTrigger: {
         trigger: ref.current,
