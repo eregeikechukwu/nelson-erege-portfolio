@@ -9,6 +9,7 @@ import { MoveDownRight } from "lucide-react";
 // import Link from "next/link";
 import { CldImage } from "next-cloudinary";
 
+import { useCanvas } from "@/app/contexts";
 import { Globe, ParallaxSlider } from "@/components";
 import { useHashPath, useHeaderTranslate, useSlowScroll } from "@/hooks";
 
@@ -18,6 +19,14 @@ import { slideUp } from "./variants";
 export function Header() {
   const ref = useRef(null);
 
+  const { setNavOpen } = useCanvas;
+
+  //Set Nav state
+  useEffect(() => {
+    setNavOpen(false);
+  }, []);
+
+  //Slow scroll
   useSlowScroll(ref, 3, 370);
 
   //Translate variants
