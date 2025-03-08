@@ -1,10 +1,10 @@
 export const preloaderWords = [
   "Hello",
+  "やあ",
   "Bonjour",
   "Ciao",
   "Olà",
   "سلام",
-  "やあ",
   "Hallå",
   "Guten tag",
   "Hallo",
