@@ -19,7 +19,7 @@ import { slideUp } from "./variants";
 export function Header() {
   const ref = useRef(null);
 
-  const { setNavOpen } = useCanvas;
+  const { setNavOpen } = useCanvas();
 
   //Set Nav state
   useEffect(() => {
