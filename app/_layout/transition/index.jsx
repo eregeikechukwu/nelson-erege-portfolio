@@ -20,7 +20,7 @@ export function Transition({ children }) {
 
   // The duration is dynamic based on if the page has a hash or if ots the home page load
   useEffect(() => {
-    setDuration(pathname === "/" && !hashPath ? 2000 : 200);
+    setDuration(pathname === "/" && !hashPath ? 1900 : 200);
   }, [hashPath, pathname]);
 
   useEffect(() => {

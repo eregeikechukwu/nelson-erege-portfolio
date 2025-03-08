@@ -9,7 +9,7 @@ export function useHeaderTranslate() {
   const { hashPath, hash, hasLoaded } = useHashPath();
 
   useEffect(() => {
-    hasLoaded ? (hashPath ? setDelay(0.7) : setDelay(2.4)) : setDelay(0);
+    hasLoaded ? (hashPath ? setDelay(0.7) : setDelay(2.2)) : setDelay(0);
   }, [hashPath, hasLoaded, hash]);
 
   const slideUp = {
