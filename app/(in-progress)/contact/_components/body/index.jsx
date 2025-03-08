@@ -1,14 +1,25 @@
 "use client";
 
+import { useEffect } from "react";
+
 import { motion } from "motion/react";
+import { usePathname } from "next/navigation";
 
 import { Form } from "@/app/_components/Form";
+import { useCanvas } from "@/app/contexts";
 
 import { variants } from "../variants";
 import { Contacts } from "./contacts";
 import styles from "./styles.module.scss";
 
 export function Body() {
+  const pathName = usePathname();
+  const { setNavOpen } = useCanvas();
+
+  useEffect(() => {
+    setNavOpen(false);
+  }, [pathName]);
+
   return (
     <motion.div
       variants={variants}
