@@ -20,7 +20,7 @@ export function OffcanvasFooter() {
   });
 
   return (
-    <div className="border-t border-gray-500 max-sm:border-solid sm:border-none">
+    <div className="border-t border-gray-500 max-sm:border-solid max-sm:pb-12 sm:border-none">
       {/* <Stripe /> */}
       <h5 className="mb-3 mt-6 block ps-2 text-[.6rem] text-white max-md:text-[.6rem]">
         Socials
