@@ -1,10 +1,11 @@
 /** @type {import('next').Metadata} */
 export const rootMetadata = {
-  metadataBase: new URL("https://dennis-snellenberg-portfolio.vercel.app/"),
+  metadataBase: new URL("https://nelson-erege-portfolio.vercel.app/"),
   title: {
     template: "%s | Nelson Erege",
     default: "Nelson Erege • Front-end Engineer & Developer",
   },
+  themeColor: "#191c21",
   description:
     "Building consistent and engaging digital experiences. Located in Nigeria. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Nelson",
   generator: "Nelson Erege",
