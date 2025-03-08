@@ -38,7 +38,7 @@ export function RouteHandler() {
           () => {
             element.scrollIntoView({ behavior: "smooth", block: "start" });
           },
-          isHash ? 220 : 2020,
+          isHash ? 1000 : 2020,
         );
       }
     }

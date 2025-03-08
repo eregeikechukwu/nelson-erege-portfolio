@@ -23,7 +23,7 @@ export const magneticVariance = cva(
         lg: "px-8 py-16 text-lg lg:px-12 lg:py-20",
         lc: "px-8 py-16 text-lg max-md:px-6 max-md:py-[3.4rem] lg:px-[2.2rem] lg:py-[4.2rem]",
         xl: "px-10 py-16 text-lg lg:px-14 lg:py-20",
-        ab: " px-[2.4rem] py-14 text-lg  max-sm:px-[2.2rem] max-sm:py-[3.3rem] ",
+        ab: " px-[1.4rem] py-14 text-lg  max-sm:px-[1.3rem] max-sm:py-[3.3rem] ",
         sd: "px-[2.85rem] py-[3.63rem] lg:px-[2.85rem] lg:py-[3.63rem]",
       },
     },

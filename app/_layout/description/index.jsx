@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { NodeNextRequest } from "next/dist/server/base-http/node";
 import Link from "next/link";
+import { AiOutlineDownload } from "react-icons/ai";
 import Balancer from "react-wrap-balancer";
 
 import { MagneticButton, ParallaxFade, ParallaxReveal } from "@/components";
@@ -58,7 +59,10 @@ export function Description() {
               download="Nelson_Erege_Resume.pdf"
             >
               <MagneticButton variant="ghost" size="ab">
-                Resume
+                <div className="flex items-center gap-1">
+                  Resume
+                  <AiOutlineDownload className="mr-2" />
+                </div>
               </MagneticButton>
             </a>
           </div>
