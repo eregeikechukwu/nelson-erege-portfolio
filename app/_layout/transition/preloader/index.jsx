@@ -108,7 +108,7 @@ export function Preloader() {
           <Dot size={48} className="absolute -left-10 me-3" />
           <p>{greeting}</p>
         </MotionComponent>
-        <motion.svg className="absolute top-0 -z-10 h-[calc(100%+300px)] w-full">
+        <motion.svg className="absolute top-0 -z-10 h-[calc(100%+300px)] w-full max-md:w-screen">
           <motion.path
             className="fill-[var(--color-dark-dark)]"
             variants={curve}

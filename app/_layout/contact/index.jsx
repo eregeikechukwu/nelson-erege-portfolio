@@ -18,12 +18,12 @@ export function Contact() {
   return (
     <motion.footer
       ref={containerRef}
-      className="relative max-h-screen bg-foreground text-background"
+      className="relative bg-foreground text-background md:max-h-screen"
       style={{ y: transformY }}
     >
       <div
         ref={contentRef}
-        className="max-md:pb-0 max-md:pt-36 md:pb-36 md:pt-24"
+        className="max-md:pb-20 max-md:pt-36 md:pb-28 md:pt-24"
       >
         <UserDetails transformX={transformX} />
         <SocialInfo />
