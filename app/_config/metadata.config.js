@@ -5,7 +5,7 @@ export const rootMetadata = {
     template: "%s | Nelson Erege",
     default: "Nelson Erege • Front-end Engineer & Developer",
   },
-  themeColor: "#191c21",
+
   description:
     "Building consistent and engaging digital experiences. Located in Nigeria. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Nelson",
   generator: "Nelson Erege",

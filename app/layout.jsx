@@ -1,4 +1,4 @@
-import { rootMetadata } from "@/config";
+import { rootMetadata, viewportdata } from "@/config";
 import { neue_montreal } from "@/fonts";
 import { Offcanvas } from "@/layout";
 import { Providers } from "@/providers";
@@ -9,6 +9,7 @@ import { CanvasProvider } from "./contexts/offCanvasContext";
 
 /** @type {import('next').Metadata} */
 export const metadata = rootMetadata;
+export const viewport = viewportdata;
 
 /** @param {import('react').PropsWithChildren<unknown>} */
 export default function RootLayout({ children }) {
