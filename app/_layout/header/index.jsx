@@ -33,9 +33,10 @@ export function Header() {
   const { slideUp, delay } = useHeaderTranslate();
 
   return (
-    <motion.header
+    <motion.section
       className="page relative h-screen overflow-hidden bg-secondary-foreground text-background md:h-[110vh]"
       variants={slideUp}
+      id="home"
       initial="initial"
       animate={delay && slideUp.enter}
     >
@@ -138,6 +139,6 @@ export function Header() {
           </motion.div>
         </div>
       </div>
-    </motion.header>
+    </motion.section>
   );
 }

@@ -14,7 +14,7 @@ const MotionComponent = motion(FixedOverlay);
 export function OffcanvasBody() {
   return (
     <MotionComponent
-      className="z-40"
+      className="fixed z-40"
       variants={slideLeft}
       initial="initial"
       animate="enter"
