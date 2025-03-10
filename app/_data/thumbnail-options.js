@@ -1,6 +1,6 @@
 export const thumbnailOptions = [
   {
-    href: "https://worldwise-jonas.netlify.app",
+    href: "https://worldwise-nelson.vercel.app",
     title: "WORLDWISE",
     image:
       "https://res.cloudinary.com/du0dbvljb/image/upload/v1741155162/worldwise_oqnbea.png",
