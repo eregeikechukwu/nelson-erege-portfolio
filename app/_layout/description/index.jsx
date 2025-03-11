@@ -55,7 +55,7 @@ export function Description() {
             ref={ref}
           >
             <a
-              href="/Mark_Zuck_Jnr_Resume.pdf"
+              href="/Nelson_Erege_Resume.pdf"
               download="Nelson_Erege_Resume.pdf"
             >
               <MagneticButton variant="ghost" size="ab">
