@@ -4,7 +4,7 @@ export const thumbnailOptions = [
     title: "WORLDWISE",
     image:
       "https://res.cloudinary.com/du0dbvljb/image/upload/v1741155162/worldwise_oqnbea.png",
-    stack: ["React", "Javascript", "CSS", "Leaflet"],
+    stack: ["React", "Javascript", "CSS", "Leaflet", "Supabase", "PostgreSQL"],
     writeup:
       "Worldwise is a travel tracking app built with React, allowing users to mark visited places on an interactive map. It uses React Router for navigation, the Context API for state management, and Leaflet for mapping. The project highlights performance optimizations and reusable components.",
     // writeup:

@@ -15,8 +15,10 @@ import javascript from "../../../../icons/javascript.svg";
 import leaflet from "../../../../icons/leaflet.svg";
 import nextjs from "../../../../icons/nextjs.svg";
 import nodejs from "../../../../icons/nodejs.svg";
+import postgresql from "../../../../icons/postgresql.svg";
 import react from "../../../../icons/react.svg";
 import scss from "../../../../icons/scss.svg";
+import supabase from "../../../../icons/supabase.svg";
 import tailwind from "../../../../icons/tailwind.svg";
 
 /**
@@ -37,6 +39,8 @@ const iconPaths = {
   figma: figma,
   leaflet: leaflet,
   nodejs: nodejs,
+  supabase: supabase,
+  postgresql: postgresql,
   // Add more mappings as needed
 };
 
