@@ -31,7 +31,7 @@ export const thumbnailOptions = [
     //   "Timbu Cloud is a modern E-Commerce platform that dynamically loads productsbfrom an external API to its catalog. It features a seamless shopping cart system, a secure checkout process, and a simulated payment gateway for transaction testing. Timbu Cloud showcases efficient API integration and a robust front-end functionality.",
   },
   {
-    href: "https://timbu-marketplace-nellify.vercel.app",
+    href: "https://nelson-erege-portfolio.vercel.app",
     title: "Portfolio",
     image:
       "https://res.cloudinary.com/du0dbvljb/image/upload/v1741172473/Group_1_1_wgkhap.png",
