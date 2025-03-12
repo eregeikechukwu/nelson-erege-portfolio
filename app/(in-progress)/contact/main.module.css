@@ -1,0 +1,23 @@
+.main {
+  background-color: var(--color-dark);
+}
+
+.container {
+  background: var(--color-dark);
+  padding-bottom: calc(var(--section-padding) / 3);
+  padding-top: calc(var(--section-padding) * 1.33);
+  padding-left: calc(var(--container-padding) * 2);
+  padding-right: calc(var(--container-padding) * 2);
+  margin: 0 auto;
+  max-width: 100em;
+}
+@media screen and (max-width: 720px) {
+  .container {
+    padding: 11rem 3.8rem 0 4.6rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .container {
+    padding: 11rem 0.9rem 0 1.3rem;
+  }
+}/*# sourceMappingURL=main.module.css.map */

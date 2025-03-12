@@ -1,0 +1,14 @@
+.body {
+  padding-top: 4rem;
+}
+
+.form {
+  width: 73%;
+  padding-right: calc(var(--container-padding) / 2);
+}
+@media screen and (max-width: 720px) {
+  .form {
+    order: 2;
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

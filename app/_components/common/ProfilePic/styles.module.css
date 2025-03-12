@@ -1,0 +1,15 @@
+.profilePicture {
+  position: relative;
+  display: inline-flex;
+  border-radius: 50%;
+  background: url(./profile-picture.png) center center no-repeat;
+  background-size: cover;
+  width: clamp(4.5em, 6.5vw, 8em);
+  height: clamp(4.5em, 6.5vw, 8em);
+}
+@media screen and (max-width: 720px) {
+  .profilePicture {
+    width: 3rem;
+    height: 3rem;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

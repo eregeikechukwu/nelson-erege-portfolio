@@ -1,0 +1,25 @@
+.backdrop {
+  right: 430px;
+  width: 8rem;
+}
+@media screen and (max-width: 540px) {
+  .backdrop {
+    right: 435px;
+    width: 11rem;
+  }
+}
+@media screen and (max-width: 435px) {
+  .backdrop {
+    right: 360px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .backdrop {
+    right: 346px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .backdrop {
+    right: 320px;
+  }
+}/*# sourceMappingURL=style.module.css.map */

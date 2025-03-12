@@ -130,7 +130,7 @@ export function Header() {
 
             <h4 className="text-[clamp(1.55em,2.4vw,2.75em)]">
               <span className="block">Freelance</span>
-              <span className="block">Software &amp; Developer</span>
+              <span className="block">Software Developer</span>
             </h4>
 
             <div className="relative md:hidden">
