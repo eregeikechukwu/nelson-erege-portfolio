@@ -54,4 +54,9 @@ export function OffcanvasLinks() {
     </div>
   );
 }
+//Laptop viewport
 //1209 x 634 layout
+//1209 x 634 layout
+
+//galeery vudeo layout
+//1280 x 943 layout

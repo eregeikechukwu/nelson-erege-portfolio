@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { motion } from "framer-motion";
 import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MoveDownRight } from "lucide-react";
 // import Link from "next/link";
 import { CldImage } from "next-cloudinary";
