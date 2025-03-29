@@ -17,13 +17,14 @@ const MotionComponent = motion(Center);
 export function Preloader() {
   const { width, height } = useDimensions();
   const [isLoaded, setIsloaded] = useState(false);
+  const innerBulge = window.innerWidth > 720 ? 700 : 100;
 
   useEffect(() => {
     setIsloaded(true);
   }, [width]);
 
   const initialPath = `M0 0 L${width} 0 L${width} ${height} Q${width / 2} ${
-    height + 300
+    height + innerBulge
   } 0 ${height}  L0 0`;
   const targetPath = `M0 0 L${width} 0 L${width} ${height} Q${
     width / 2
