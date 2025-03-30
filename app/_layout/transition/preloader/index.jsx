@@ -17,7 +17,7 @@ const MotionComponent = motion(Center);
 export function Preloader() {
   const { width, height } = useDimensions();
   const [isLoaded, setIsloaded] = useState(false);
-  const innerBulge = window.innerWidth > 720 ? 700 : 100;
+  const innerBulge = window.innerWidth > 720 ? 400 : 100;
 
   useEffect(() => {
     setIsloaded(true);
@@ -109,7 +109,7 @@ export function Preloader() {
           <Dot size={48} className="absolute -left-10 me-3" />
           <p>{greeting}</p>
         </MotionComponent>
-        <motion.svg className="absolute top-0 -z-10 h-[calc(100%+300px)] w-full max-md:h-[calc(100%+100px)] max-md:w-screen">
+        <motion.svg className="absolute top-0 -z-10 h-[calc(100%+300px)] w-screen max-md:h-[calc(100%+100px)] max-md:w-screen">
           <motion.path
             className="fill-[var(--color-dark-dark)]"
             variants={curve}
