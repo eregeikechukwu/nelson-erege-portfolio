@@ -68,12 +68,15 @@ You can visit and explore my portfolio at [Nekson Erege Portfolio](https://nelso
 <p>
   <a href="https://github.com/eregeikechukwu">
     <img src="https://img.shields.io/badge/Github-000?style=flat&logo=github&logoColor=white"/>
+    GitHub 
   </a>
   <a href="https://www.linkedin.com/in/nelson-erege-b979282a6">
     <img src="https://img.shields.io/badge/linkedin-0A66C2?style=flat&logo=linkedin&logoColor=white"/>
+    Linkedin 
   </a>
   <a href="https://twitter.com/EregeNelso40316">
     <img src="https://img.shields.io/badge/twitter-1DA1F2?style=flat&logo=twitter&logoColor=white"/>
+    Twitter 
   </a>
 </p>
 
