@@ -48,7 +48,7 @@ You can visit and explore my portfolio at [Nekson Erege Portfolio](https://nelso
 - Using Node.js for contact form functionality
 - Fully responsive
 - Fully functional email contact form
-- Page Transition with Smooth Scrolling
+- Page Transition with Smooth , slow Scrolling
 - Linting with Eslint and Stylelint
 - Format with Prettier
 - Husky and Lint-staged for Pre-committing
