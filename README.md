@@ -6,7 +6,7 @@ My Portfolio site, implemented with [Next.js](https://nextjs.org/) and [Framer M
   To support me, please give a <strong>star⭐</strong>
   to this repository.
   <br/>
-  I appreciate your support in advance. ❤
+  I appreciate your support in advance. 🤲🏽❤️
 </p>
 
 <p>
