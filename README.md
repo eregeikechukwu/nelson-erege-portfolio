@@ -1,7 +1,7 @@
 <div id='top' align="center">
 
 My Portfolio site, implemented with [Next.js](https://nextjs.org/) and [Framer Motion](https://www.framer.com/motion/). Styled with [Tailwind CSS](https://tailwindcss.com/) and [SCSS]().
-
+.....
 <p>
   To support me, please give a <strong>star⭐</strong>
   to this repository.
