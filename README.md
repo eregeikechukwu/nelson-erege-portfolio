@@ -2,11 +2,12 @@
 
 My Portfolio site, implemented with [Next.js](https://nextjs.org/) and [Framer Motion](https://www.framer.com/motion/). Styled with [Tailwind CSS](https://tailwindcss.com/) and [SCSS]().
 
+
 <p>
   To support me, please give a <strong>star⭐</strong>
   to this repository.
   <br/>
-  I appreciate your support in advance. ❤
+  I appreciate your support in advance. 🤲🏽❤️
 </p>
 
 <p>
@@ -48,7 +49,7 @@ You can visit and explore my portfolio at [Nekson Erege Portfolio](https://nelso
 - Using Node.js for contact form functionality
 - Fully responsive
 - Fully functional email contact form
-- Page Transition with Smooth Scrolling
+- Page Transition with Smooth , slow Scrolling
 - Linting with Eslint and Stylelint
 - Format with Prettier
 - Husky and Lint-staged for Pre-committing
@@ -68,12 +69,15 @@ You can visit and explore my portfolio at [Nekson Erege Portfolio](https://nelso
 <p>
   <a href="https://github.com/eregeikechukwu">
     <img src="https://img.shields.io/badge/Github-000?style=flat&logo=github&logoColor=white"/>
+    GitHub 
   </a>
   <a href="https://www.linkedin.com/in/nelson-erege-b979282a6">
     <img src="https://img.shields.io/badge/linkedin-0A66C2?style=flat&logo=linkedin&logoColor=white"/>
+    Linkedin 
   </a>
   <a href="https://twitter.com/EregeNelso40316">
     <img src="https://img.shields.io/badge/twitter-1DA1F2?style=flat&logo=twitter&logoColor=white"/>
+    Twitter 
   </a>
 </p>
 
