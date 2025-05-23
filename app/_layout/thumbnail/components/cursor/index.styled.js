@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
-import { Center } from '@/components';
+import { Center } from "@/components";
 
 export const CursorShape = styled(Center)`
   color: white;
@@ -14,4 +14,8 @@ export const CursorShape = styled(Center)`
   position: fixed;
   z-index: 2;
   pointer-events: none;
+
+  @media screen and (width <= 720px) {
+    display: none;
+  }
 `;

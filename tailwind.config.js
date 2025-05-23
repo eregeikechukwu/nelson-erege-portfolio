@@ -13,7 +13,10 @@ const tailwindConfig = {
         lg: "1100px", // Change the "lg" breakpoint to 1100px
         xl: "1400px", // Change the "xl" breakpoint to 1400px
         "2xl": "1600px", // Change the "2xl" breakpoint to 1600px
+        // "max-cs": { max: "720px" }, // Add a new breakpoint for max-md
+        // "max-lg": { max: "1100px" }, // Add a new breakpoint for max-lg
       },
+      colors: {},
     },
   },
 };

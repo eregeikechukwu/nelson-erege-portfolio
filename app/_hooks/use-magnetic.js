@@ -9,6 +9,8 @@ export function useMagnetic(element) {
   /** @type {import('react').PointerEventHandler<HTMLButtonElement>} */
   const handleMagneticMove = useCallback(
     (event) => {
+      if (window.innerWidth < 768) return;
+
       const { clientX, clientY } = event;
       const { width, height, left, top } =
         element.current.getBoundingClientRect();

@@ -17,6 +17,10 @@ export function useSlowScroll(
   useEffect(() => {
     // ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 
+    if (typeof window === "undefined") return;
+
+    if (window.innerWidth < 768) return;
+
     gsap.registerPlugin(ScrollTrigger);
     gsap.set(ref.current, { y: y });
     const tl = gsap.to(ref.current, {
