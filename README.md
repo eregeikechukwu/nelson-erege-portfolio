@@ -25,8 +25,6 @@ My Portfolio site, implemented with [Next.js](https://nextjs.org/) and [Framer M
 ## 🔧 Technologies
 
 
-
-
 ![Next.js](https://img.shields.io/badge/-Next.js-05122A?style=for-the-badge&logo=next.js)&nbsp;
 ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=for-the-badge&logo=javascript)&nbsp;
 ![Framer Motion](https://img.shields.io/badge/-FramerMotion-05122A?style=for-the-badge&logo=framer)&nbsp;
