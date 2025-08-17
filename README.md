@@ -36,6 +36,7 @@ My Portfolio site, implemented with [Next.js](https://nextjs.org/) and [Framer M
 
 You can visit and explore my portfolio at [Nekson Erege Portfolio](https://nelson-erege-portfolio.vercel.app/).
 
+
 ## 🔥 Features
 
 - Using Next.js Cloudinary
@@ -43,7 +44,7 @@ You can visit and explore my portfolio at [Nekson Erege Portfolio](https://nelso
 - Using Gsap with Lenis
 - Using React Wrap Balancer
 - Using Styled Component
-- Using Sass for styling
+- Using SCSS for styling
 - Using Tailwindcss with Custom Plugin
 - Using Postcss with Plugins
 - Using Clsx with twMerge
@@ -83,3 +84,4 @@ You can visit and explore my portfolio at [Nekson Erege Portfolio](https://nelso
 </p>
 
 <p align="right">(<a href="#top">BACK TO TOP🔝</a>)</p>
+
