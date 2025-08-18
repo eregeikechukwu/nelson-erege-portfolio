@@ -11,7 +11,8 @@ export const thumbnailOptions = [
     //   "Worldwise is a travel tracking app built with react that allows users to mark places they've visited on an interactive map. It features Reacts Router for navigation, the context API for state management, and integrates leaflet for mapping. This project showcases modern performance optimization techniques and reusable components.",
   },
   {
-    href: "https://raft-nelson-landing-page.vercel.app",
+    href: "https://raft-landing-page.vercel.app/",
+    // href: "https://raft-nelson-landing-page.vercel.app",
     title: "RAFT",
     image:
       "https://res.cloudinary.com/du0dbvljb/image/upload/v1741153913/Profile-picture_vh8bkc.jpg",
@@ -34,7 +35,7 @@ export const thumbnailOptions = [
     href: "https://nelson-erege-portfolio.vercel.app",
     title: "Portfolio",
     image:
-      "https://res.cloudinary.com/du0dbvljb/image/upload/v1741172473/Group_1_1_wgkhap.png",
+      "https://res.cloudinary.com/du0dbvljb/image/upload/v1755480017/portfolio-banner_kcxtru.png",
     stack: ["Nextjs", "React", "JavaScript", "Tailwind", "SCSS", "Nodejs"],
     writeup:
       "A visually dynamic and interactive portfolio built with Next.js, React, TailwindCSS, SCSS, GSAP, and Framer Motion. It features smooth animations, seamless page transitions, an optimized UI, and a fully functional contact form using Next.js API routes for direct email communication.",

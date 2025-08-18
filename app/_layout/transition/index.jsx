@@ -15,7 +15,7 @@ export function Transition({ children }) {
   const pathname = usePathname();
   const scrollContainerRef = useRef(null);
 
-  useHardScroll(0.05, 0.5);
+  useHardScroll(0.05, 2);
   const { hashPath } = useHashPath();
 
   // The duration is dynamic based on if the page has a hash or if ots the home page load

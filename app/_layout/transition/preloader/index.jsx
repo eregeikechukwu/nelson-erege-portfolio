@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { motion } from "framer-motion";
 import { Dot, WindIcon } from "lucide-react";
@@ -17,14 +17,15 @@ const MotionComponent = motion(Center);
 export function Preloader() {
   const { width, height } = useDimensions();
   const [isLoaded, setIsloaded] = useState(false);
-  const innerBulge = window.innerWidth > 720 ? 400 : 100;
+  const innerBulge = useRef(100);
 
   useEffect(() => {
+    innerBulge.current = window.innerWidth > 720 ? 400 : 100;
     setIsloaded(true);
   }, [width]);
 
   const initialPath = `M0 0 L${width} 0 L${width} ${height} Q${width / 2} ${
-    height + innerBulge
+    height + innerBulge.current
   } 0 ${height}  L0 0`;
   const targetPath = `M0 0 L${width} 0 L${width} ${height} Q${
     width / 2

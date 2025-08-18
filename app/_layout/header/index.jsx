@@ -41,7 +41,7 @@ export function Header() {
     >
       <div className={styles.header__image}>
         <CldImage
-          src="https://res.cloudinary.com/du0dbvljb/image/upload/v1741020392/result_4_nndg3d.png"
+          src="https://res.cloudinary.com/du0dbvljb/image/upload/v1755470107/ChatGPT_Image_Aug_17_2025_08_21_51_PM_jray5c_e_background_removal_f_png_vki2ne.png"
           className={`header-image translate-y-28 object-cover will-change-transform md:scale-125 md:object-contain`}
           ref={ref}
           fill={true}

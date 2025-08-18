@@ -38,7 +38,7 @@ export function Field({ field, formData, handleChange, isError, status }) {
           setIswrong(boolean);
         }
       })();
-  }, [isError, formData.name, formData.email]);
+  }, [isError, formData.name, field.name, formData.email]);
 
   return (
     <div className={`${styles.field} ${styles.flex_col}`}>
