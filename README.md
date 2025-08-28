@@ -1,6 +1,9 @@
 <div id='top' align="center">
 
+
+
 My Portfolio site, implemented with [Next.js](https://nextjs.org/) and [Framer Motion](https://www.framer.com/motion/). Styled with [Tailwind CSS](https://tailwindcss.com/) and [SCSS]()
+
 <p>
   To support me, please give a <strong>star⭐</strong>
   to this repository.
@@ -79,5 +82,5 @@ You can visit and explore my portfolio at [Nekson Erege Portfolio](https://nelso
   </a>
 </p>
 
-<p align="right">(<a href="#top">BACK TO TOP🔝</a>)</p>
 
+<p align="right">(<a href="#top">BACK TO TOP🔝</a>)</p>
