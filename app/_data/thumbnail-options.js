@@ -1,5 +1,14 @@
 export const thumbnailOptions = [
   {
+    href: "https://agc-news-nelson-erege.vercel.app",
+    title: "AGC News-network",
+    image:
+      "https://res.cloudinary.com/du0dbvljb/image/upload/v1757603508/Group_2_1_fvhquh.png",
+    stack: ["Nextjs", "React", "TypeScript", "Tailwind", "SCSS"],
+    writeup:
+      "AGC News – A modern news platform built with Next.js, TypeScript, React Query, Redux Toolkit, Tailwind & SCSS. Features include responsive layouts, story categories, bookmarks, search filters, skeleton loaders, and dynamic story pages. 🚀",
+  },
+  {
     href: "https://worldwise-nelson.vercel.app",
     title: "WORLDWISE",
     image:
@@ -30,16 +39,5 @@ export const thumbnailOptions = [
       "Timbu Cloud is a modern E-Commerce platform that loads products dynamically from an external API. It includes a smooth shopping cart, secure checkout, and a simulated payment gateway for transaction testing. The platform highlights efficient API integration and strong front-end functionality.",
     // writeup:
     //   "Timbu Cloud is a modern E-Commerce platform that dynamically loads productsbfrom an external API to its catalog. It features a seamless shopping cart system, a secure checkout process, and a simulated payment gateway for transaction testing. Timbu Cloud showcases efficient API integration and a robust front-end functionality.",
-  },
-  {
-    href: "https://nelson-erege-portfolio.vercel.app",
-    title: "Portfolio",
-    image:
-      "https://res.cloudinary.com/du0dbvljb/image/upload/v1755480017/portfolio-banner_kcxtru.png",
-    stack: ["Nextjs", "React", "JavaScript", "Tailwind", "SCSS", "Nodejs"],
-    writeup:
-      "A visually dynamic and interactive portfolio built with Next.js, React, TailwindCSS, SCSS, GSAP, and Framer Motion. It features smooth animations, seamless page transitions, an optimized UI, and a fully functional contact form using Next.js API routes for direct email communication.",
-    // writeup:
-    //   "A visually dynamic and interactive portfolio built with NextJS, React, TailwindCSS, SCSS, GSAP and Framer motion. It features smooth animations seamless page transitions and an optimized UI and a fully functional contact form powered by NextJs API routes allowing for direct mail communication.",
   },
 ];
