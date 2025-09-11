@@ -20,6 +20,7 @@ import react from "../../../../icons/react.svg";
 import scss from "../../../../icons/scss.svg";
 import supabase from "../../../../icons/supabase.svg";
 import tailwind from "../../../../icons/tailwind.svg";
+import typescript from "../../../../icons/typescript.svg";
 
 /**
  * @param {Object} props
@@ -41,6 +42,7 @@ const iconPaths = {
   nodejs: nodejs,
   supabase: supabase,
   postgresql: postgresql,
+  typescript: typescript,
   // Add more mappings as needed
 };
 
