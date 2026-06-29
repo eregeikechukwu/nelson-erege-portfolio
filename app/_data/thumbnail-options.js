@@ -1,5 +1,27 @@
 export const thumbnailOptions = [
   {
+    href: "https://futostudentsresults.vercel.app/",
+    title: "FUTO Students Results",
+    image:
+      "https://res.cloudinary.com/du0dbvljb/image/upload/v1782280780/Group_10_1_1_chhzbw.jpg",
+    stack: ["Nextjs", "TypeScript", "SCSS", "Supabase", "PostgreSQL"],
+    writeup:
+      "Many universities still manage results through slow and inefficient manual processes. The Result Portal centralizes result management, making it faster, more accurate, and easier to access. It improves efficiency, transparency, and accountability across the system.",
+    // writeup:
+    //   "Worldwise is a travel tracking app built with react that allows users to mark places they've visited on an interactive map. It features Reacts Router for navigation, the context API for state management, and integrates leaflet for mapping. This project showcases modern performance optimization techniques and reusable components.",
+  },
+  {
+    href: "https://truview-fe.vercel.app/",
+    title: "Truview",
+    image:
+      "https://res.cloudinary.com/du0dbvljb/image/upload/v1782293512/Group_12_2_1_g6wgn9.jpg",
+    stack: ["Nextjs", "TypeScript", "Tailwind", "PostgreSQL"],
+    writeup:
+      "Watching movies online can feel isolating, even with friends. This platform lets users create watch parties, stream movies in sync, and chat or react together in real time. It makes watching movies a shared, interactive experience from anywhere.",
+    // writeup:
+    //   "Timbu Cloud is a modern E-Commerce platform that dynamically loads productsbfrom an external API to its catalog. It features a seamless shopping cart system, a secure checkout process, and a simulated payment gateway for transaction testing. Timbu Cloud showcases efficient API integration and a robust front-end functionality.",
+  },
+  {
     href: "https://agc-news-nelson-erege.vercel.app",
     title: "AGC News-network",
     image:
@@ -8,17 +30,7 @@ export const thumbnailOptions = [
     writeup:
       "AGC News – A modern news platform built with Next.js, TypeScript, React Query, Redux Toolkit, Tailwind & SCSS. Features include responsive layouts, story categories, bookmarks, search filters, skeleton loaders, and dynamic story pages. 🚀",
   },
-  {
-    href: "https://worldwise-nelson.vercel.app",
-    title: "WORLDWISE",
-    image:
-      "https://res.cloudinary.com/du0dbvljb/image/upload/v1741155162/worldwise_oqnbea.png",
-    stack: ["React", "Javascript", "CSS", "Leaflet", "Supabase", "PostgreSQL"],
-    writeup:
-      "Worldwise is a travel tracking app built with React, allowing users to mark visited places on an interactive map. It uses React Router for navigation, the Context API for state management, and Leaflet for mapping. The project highlights performance optimizations and reusable components.",
-    // writeup:
-    //   "Worldwise is a travel tracking app built with react that allows users to mark places they've visited on an interactive map. It features Reacts Router for navigation, the context API for state management, and integrates leaflet for mapping. This project showcases modern performance optimization techniques and reusable components.",
-  },
+
   {
     href: "https://raft-landing-page.vercel.app/",
     // href: "https://raft-nelson-landing-page.vercel.app",
@@ -28,16 +40,5 @@ export const thumbnailOptions = [
     stack: ["React", "Javascript", "SCSS"],
     writeup:
       "Raft landing page is a sleek animated site built with React, SCSS and Framer motion for smooth engaging transitions. It highlights Raft's project management features with fluid animations and a modern UI, enhacing user experience",
-  },
-  {
-    href: "https://timbu-marketplace-nellify.vercel.app",
-    title: "TIMBU CLOUD",
-    image:
-      "https://res.cloudinary.com/du0dbvljb/image/upload/v1741171047/Group_1_1_mkpuho.png",
-    stack: ["HTML", "JavaScript", "SCSS", "Figma"],
-    writeup:
-      "Timbu Cloud is a modern E-Commerce platform that loads products dynamically from an external API. It includes a smooth shopping cart, secure checkout, and a simulated payment gateway for transaction testing. The platform highlights efficient API integration and strong front-end functionality.",
-    // writeup:
-    //   "Timbu Cloud is a modern E-Commerce platform that dynamically loads productsbfrom an external API to its catalog. It features a seamless shopping cart system, a secure checkout process, and a simulated payment gateway for transaction testing. Timbu Cloud showcases efficient API integration and a robust front-end functionality.",
   },
 ];
