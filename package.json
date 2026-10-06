@@ -27,6 +27,7 @@
   "dependencies": {
     "@studio-freight/lenis": "^1.0.29",
     "@studio-freight/react-lenis": "^0.0.47",
+    "@vercel/analytics": "^2.0.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.16",

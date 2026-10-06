@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+
 import { rootMetadata, viewportdata } from "@/config";
 import { neue_montreal } from "@/fonts";
 import { Offcanvas } from "@/layout";
@@ -20,6 +22,7 @@ export default function RootLayout({ children }) {
         <CanvasProvider>
           <Providers>
             <Offcanvas />
+            <Analytics />
             {children}
           </Providers>
         </CanvasProvider>

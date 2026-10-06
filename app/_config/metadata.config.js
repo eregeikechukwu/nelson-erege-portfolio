@@ -1,6 +1,9 @@
 /** @type {import('next').Metadata} */
 export const rootMetadata = {
-  metadataBase: new URL("https://nelson-erege-portfolio.vercel.app/"),
+  metadataBase: new URL("https://nelson-erege-portfolio.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     template: "%s | Nelson Erege",
     default: "Nelson Erege • Front-end Engineer & Developer",
@@ -11,6 +14,28 @@ export const rootMetadata = {
   generator: "Nelson Erege",
   applicationName: "Nelson Erege",
   referrer: "origin-when-cross-origin",
+  openGraph: {
+    type: "website",
+    siteName: "Nelson Erege",
+    title: "Nelson Erege | Front-end Engineer & Developer",
+    description:
+      "Building consistent and engaging digital experiences. Located in Nigeria. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Nelson",
+    url: "https://nelson-erege-portfolio.vercel.app",
+    images: [
+      {
+        url: "https://res.cloudinary.com/du0dbvljb/image/upload/v1741172473/Group_1_1_wgkhap.png",
+        width: 800,
+        height: 600,
+        alt: "Portfolio Screenshot",
+      },
+      {
+        url: "https://res.cloudinary.com/du0dbvljb/image/upload/v1741172473/Group_1_1_wgkhap.png",
+        width: 1800,
+        height: 1600,
+        alt: "Portfolio Screenshot",
+      },
+    ],
+  },
   keywords: ["Design", "Engineer", "Front-end", "Developer"],
   authors: [
     { name: "Nelson Erege", url: "https://www.github.com/eregeikechukwu" },
@@ -31,12 +56,12 @@ export const rootMetadata = {
     },
   },
   robots: {
-    index: false,
+    index: true,
     follow: true,
     nocache: true,
     googleBot: {
       index: true,
-      follow: false,
+      follow: true,
       noimageindex: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
